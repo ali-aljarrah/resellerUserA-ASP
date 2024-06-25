@@ -2170,6 +2170,7 @@
     <Content Include="reloadreport.aspx" />
     <Content Include="send_sms.aspx" />
     <Content Include="sentreport.aspx" />
+    <Content Include="settings.aspx" />
     <Content Include="sms_temp.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -2286,6 +2287,13 @@
     </Compile>
     <Compile Include="sentreport.aspx.designer.cs">
       <DependentUpon>sentreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
     </Compile>
     <Compile Include="sms_temp.aspx.cs">
       <DependentUpon>sms_temp.aspx</DependentUpon>
