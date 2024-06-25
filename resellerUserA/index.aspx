@@ -7,10 +7,7 @@
 <%@ Register Src="~/Controls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
 <%@ Register Src="~/Controls/footerLinks.ascx" TagPrefix="uc1" TagName="footerLinks" %>
 
-
-
 <uc1:head runat="server" ID="head" />
-
 	<title>Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes</title>
 	</head>
 	<!--end::Head-->
