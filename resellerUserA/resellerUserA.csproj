@@ -2154,15 +2154,33 @@
     <Content Include="assets\plugins\global\fonts\line-awesome\la-solid-900.svg" />
     <Content Include="assets\plugins\global\plugins.bundle.css" />
     <Content Include="assets\plugins\global\plugins.bundle.js" />
+    <Content Include="bulksms.aspx" />
     <Content Include="Controls\footer.ascx" />
     <Content Include="Controls\footerLinks.ascx" />
     <Content Include="Controls\head.ascx" />
     <Content Include="Controls\menuTop.ascx" />
     <Content Include="Controls\sideBar.ascx" />
+    <Content Include="cov.aspx" />
+    <Content Include="groups_manager.aspx" />
+    <Content Include="hlr.aspx" />
+    <Content Include="hlr_log.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="paymentsreport.aspx" />
+    <Content Include="queuereport.aspx" />
+    <Content Include="reloadreport.aspx" />
+    <Content Include="send_sms.aspx" />
+    <Content Include="sentreport.aspx" />
+    <Content Include="sms_temp.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bulksms.aspx.cs">
+      <DependentUpon>bulksms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bulksms.aspx.designer.cs">
+      <DependentUpon>bulksms.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\footer.ascx.cs">
       <DependentUpon>footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2198,6 +2216,34 @@
     <Compile Include="Controls\sideBar.ascx.designer.cs">
       <DependentUpon>sideBar.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cov.aspx.cs">
+      <DependentUpon>cov.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cov.aspx.designer.cs">
+      <DependentUpon>cov.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="groups_manager.aspx.cs">
+      <DependentUpon>groups_manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="groups_manager.aspx.designer.cs">
+      <DependentUpon>groups_manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hlr.aspx.cs">
+      <DependentUpon>hlr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hlr.aspx.designer.cs">
+      <DependentUpon>hlr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hlr_log.aspx.cs">
+      <DependentUpon>hlr_log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hlr_log.aspx.designer.cs">
+      <DependentUpon>hlr_log.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2205,7 +2251,49 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="paymentsreport.aspx.cs">
+      <DependentUpon>paymentsreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paymentsreport.aspx.designer.cs">
+      <DependentUpon>paymentsreport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="queuereport.aspx.cs">
+      <DependentUpon>queuereport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="queuereport.aspx.designer.cs">
+      <DependentUpon>queuereport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reloadreport.aspx.cs">
+      <DependentUpon>reloadreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reloadreport.aspx.designer.cs">
+      <DependentUpon>reloadreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="send_sms.aspx.cs">
+      <DependentUpon>send_sms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="send_sms.aspx.designer.cs">
+      <DependentUpon>send_sms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sentreport.aspx.cs">
+      <DependentUpon>sentreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sentreport.aspx.designer.cs">
+      <DependentUpon>sentreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sms_temp.aspx.cs">
+      <DependentUpon>sms_temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sms_temp.aspx.designer.cs">
+      <DependentUpon>sms_temp.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\font\UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7SUc.woff2" />
