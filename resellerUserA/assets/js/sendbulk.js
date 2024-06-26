@@ -21,22 +21,22 @@ $('#txtMessage').on('keypress', function () {
     }
 });
 
-$("[name='file-list-checkbox']").change(function() {
+$("[name='fileListCheckbox']").change(function() {
     var value = $(this).val();
-    var filesTextArea = $('#selected-files').val();
+    var filesTextArea = $('#selectedFiles').val();
     var numbersCount = parseInt(value.match(/\|(.*?)\|/)[1]);
     var oldFilesCount = parseInt($('#files-count').text());
     var oldNumberCount = parseInt($('#number-count').text());
 
     if($(this).is(':checked')) {
-        $('#selected-files').val(filesTextArea+value+',');
+        $('#selectedFiles').val(filesTextArea+value+',');
         $('#files-count').text(oldFilesCount+1);
         $('#total_files').text(oldFilesCount+1);
         $('#number-count').text(oldNumberCount+numbersCount);
         $('#total_recipients').text(oldNumberCount+numbersCount);
         $('#total_message').text(oldNumberCount+numbersCount);
     } else {
-        $('#selected-files').val(filesTextArea.replace(value+',', ''));
+        $('#selectedFiles').val(filesTextArea.replace(value+',', ''));
         $('#files-count').text(oldFilesCount-1);
         $('#total_files').text(oldFilesCount-1);
         $('#number-count').text(oldNumberCount-numbersCount);
@@ -175,7 +175,7 @@ $('#btnSubmit').click(function(e) {
     var txtNumber = $('#txtNumber').val();
     var cmbMessageType = $('#cmbMessageType').find(":selected").val();
     var txtMessage = $('#txtMessage').val();
-    var selectedFiles = $('#selected-files').val();
+    var selectedFiles = $('#selectedFiles').val();
 
     if (txtSender.length > 18 || txtSender.trim() == '') {
 

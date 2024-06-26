@@ -7,10 +7,7 @@
 <%@ Register Src="~/Controls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
 <%@ Register Src="~/Controls/footerLinks.ascx" TagPrefix="uc1" TagName="footerLinks" %>
 
-
-
 <uc1:head runat="server" ID="head" />
-
 	<title>Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes</title>
 	</head>
 	<!--end::Head-->
@@ -31,7 +28,7 @@
 				<!--begin::Wrapper-->
 				<div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
 					<!--begin::Sidebar-->
-<uc1:sideBar runat="server" id="sideBar" />
+					<uc1:sideBar runat="server" id="sideBar" />
 					<!--end::Sidebar-->
 					<!--begin::Main-->
 					<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
@@ -496,8 +493,6 @@
 		<!--end::App-->
 			<uc1:footerLinks runat="server" id="footerLinks" />
 
-		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
-		<script src="assets/plugins/global/plugins.bundle.js"></script>
 
 		<script>
 			var element = document.getElementById('kt_apexcharts_3');
