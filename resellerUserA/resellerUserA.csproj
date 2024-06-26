@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="api_references.aspx" />
     <Content Include="assets\css\custom.css" />
     <Content Include="assets\css\font.css" />
     <Content Include="assets\css\prism.css" />
@@ -2169,6 +2170,7 @@
     <Content Include="index.aspx" />
     <Content Include="paymentsreport.aspx" />
     <Content Include="queuereport.aspx" />
+    <Content Include="reload.aspx" />
     <Content Include="reloadreport.aspx" />
     <Content Include="send_sms.aspx" />
     <Content Include="sentreport.aspx" />
@@ -2177,6 +2179,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api_references.aspx.cs">
+      <DependentUpon>api_references.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="api_references.aspx.designer.cs">
+      <DependentUpon>api_references.aspx</DependentUpon>
+    </Compile>
     <Compile Include="bulksms.aspx.cs">
       <DependentUpon>bulksms.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2275,6 +2284,13 @@
     </Compile>
     <Compile Include="queuereport.aspx.designer.cs">
       <DependentUpon>queuereport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reload.aspx.cs">
+      <DependentUpon>reload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reload.aspx.designer.cs">
+      <DependentUpon>reload.aspx</DependentUpon>
     </Compile>
     <Compile Include="reloadreport.aspx.cs">
       <DependentUpon>reloadreport.aspx</DependentUpon>

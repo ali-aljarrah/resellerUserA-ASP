@@ -78,6 +78,15 @@ namespace resellerUserA
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtNumber;
 
         /// <summary>
+        /// codePoints control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden codePoints;
+
+        /// <summary>
         /// txtMessage control.
         /// </summary>
         /// <remarks>
@@ -87,6 +96,15 @@ namespace resellerUserA
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtMessage;
 
         /// <summary>
+        /// txtcount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtcount;
+
+        /// <summary>
         /// hiddcount control.
         /// </summary>
         /// <remarks>
@@ -94,6 +112,15 @@ namespace resellerUserA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden hiddcount;
+
+        /// <summary>
+        /// txtMessageCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden txtMessageCount;
 
         /// <summary>
         /// btnSubmit control.

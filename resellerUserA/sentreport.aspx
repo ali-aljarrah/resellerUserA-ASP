@@ -40,7 +40,7 @@
                         <div id="kt_app_content" class="app-content flex-column-fluid">
                             <!--begin::Content container-->
                             <div id="kt_app_content_container" class="app-container container-fluid">
-                                <!--begin::Row-->
+                                    <!--begin::Row-->
                                     <div class="row g-5 g-xl-10 mb-xl-10 mt-0">
                                         <!--begin::Col-->
                                         <div class="col-md-12 mb-md-0 mb-5 mt-5">
@@ -89,6 +89,7 @@
                                             <div class="separator mb-7 mt-4"></div>
                                             <!--end::Menu separator-->
                                             <!--begin::Page title-->
+                                            <div class="card card-flush shadow-xs p-5">
                                             <div class="page-title gap-1 d-flex justify-content-between align-items-start">
                                                 <div>
                                                    <!--begin::Title-->
@@ -117,7 +118,7 @@
                                                 </div> -->
                                             <!--end::Page title-->
                                             <!--begin::Card widget 4-->
-                                            <div class="card card-flush border-0">
+                                         
                                                 <!--begin::Card body-->
                                                 <div class="card-body pb-4 mt-0 pt-5 ps-0 pr-0">
                                                     <div class="table-responsive">
@@ -183,7 +184,7 @@
                                         </div>
                                         <!--end::Col-->
                                         <!--begin::Col-->
-										<div class="col-md-6 mb-md-0 mt-md-0 mb-5 mt-5">
+										<div class="col-md-12 mb-md-0 mt-md-0 mb-5 mt-5">
 											<div class="custom-border-left h-100 mt-10 mt-md-0">
 												<div class="p-8">
                                                     <div>
@@ -197,30 +198,30 @@
                                                              Please note that the export time may vary depending on the size of the data.
                                                         </p>
                                                     </div>
-                                                    <div class="row mt-6">
-                                                        <div class="col-4">
-                                                        <a href="#">
-                                                            <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
-                                                                <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
-                                                                <span>021-2023-01-29-2023-01-30.zip</span>
-                                                            </div>
-                                                        </a>
+                                                    <div class="d-flex flex-wrap align-items-center mt-6">
+                                                        <div class="me-5">
+                                                            <a href="#">
+                                                                <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
+                                                                    <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
+                                                                    <span>021-2023-01-29-2023-01-30.zip</span>
+                                                                </div>
+                                                            </a>
                                                         </div>
-                                                        <div class="col-4">
-                                                        <a href="#">
-                                                            <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
-                                                                <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
-                                                                <span>021-2023-01-29-2023-01-30.zip</span>
-                                                            </div>
-                                                        </a>
+                                                        <div class="me-5">
+                                                            <a href="#">
+                                                                <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
+                                                                    <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
+                                                                    <span>021-2023-01-29-2023-01-30.zip</span>
+                                                                </div>
+                                                            </a>
                                                         </div>
-                                                        <div class="col-4">
-                                                        <a href="#">
-                                                            <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
-                                                                <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
-                                                                <span>021-2023-01-29-2023-01-30.zip</span>
-                                                            </div>
-                                                        </a>
+                                                        <div class="me-5">
+                                                            <a href="#">
+                                                                <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
+                                                                    <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
+                                                                    <span>021-2023-01-29-2023-01-30.zip</span>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </div>
 												</div>

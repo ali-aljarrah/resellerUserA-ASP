@@ -40,11 +40,12 @@
                         <div id="kt_app_content" class="app-content flex-column-fluid">
                             <!--begin::Content container-->
                             <div id="kt_app_content_container" class="app-container container-fluid">
-                                <!--begin::Row-->
+                                 <!--begin::Row-->
                                     <div class="row g-5 g-xl-10 mb-xl-10 mt-0">
                                         <!--begin::Col-->
                                         <div class="col-md-12 mb-md-0 mb-5 mt-5">
                                             <!--begin::Page title-->
+                                        <div class="card card-flush shadow-xs h-lg-100 p-5">
                                             <div class="page-title gap-1 d-flex justify-content-between align-items-start">
                                                 <div>
                                                    <!--begin::Title-->
@@ -60,7 +61,7 @@
                                             </div>
                                             <!--end::Page title-->
                                             <!--begin::Card widget 4-->
-                                            <div class="card card-flush border-0">
+                                            
                                                 <!--begin::Card body-->
                                                 <div class="card-body pb-4 mt-0 pt-5 ps-0 pr-0">
                                                     <div class="table-responsive">
