@@ -493,8 +493,6 @@
 		<!--end::App-->
 			<uc1:footerLinks runat="server" id="footerLinks" />
 
-		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
-		<script src="assets/plugins/global/plugins.bundle.js"></script>
 
 		<script>
 			var element = document.getElementById('kt_apexcharts_3');

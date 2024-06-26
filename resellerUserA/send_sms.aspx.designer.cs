@@ -24,6 +24,15 @@ namespace resellerUserA
         protected global::resellerUserA.Controls.head head;
 
         /// <summary>
+        /// frmSendSingleSms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmSendSingleSms;
+
+        /// <summary>
         /// menuTop1 control.
         /// </summary>
         /// <remarks>
@@ -40,15 +49,6 @@ namespace resellerUserA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::resellerUserA.Controls.sideBar sideBar;
-
-        /// <summary>
-        /// frmSendSingleSms control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmSendSingleSms;
 
         /// <summary>
         /// txtSender control.
