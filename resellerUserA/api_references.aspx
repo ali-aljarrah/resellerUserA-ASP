@@ -396,7 +396,6 @@
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
-                                                                        
                                                                             <tr class="fs-14 color-black-1">
                                                                                 <td>Username</td>
                                                                                 <td>Your reseller account username</td>
@@ -405,7 +404,6 @@
                                                                                 <td>Password</td>
                                                                                 <td>Your reseller account password</td>
                                                                             </tr>
-                                                                        
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
