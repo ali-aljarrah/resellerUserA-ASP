@@ -175,41 +175,86 @@
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div style="max-height: 430px ;min-height: 430px;overflow-y: scroll;">
-                                                            <div id="content-1"></div>
-                                                            <div id="content-2" style="display: none;"></div>
-                                                            <div id="content-3" style="display: none;"></div>
                                                             <div id="content-1">
-                                                               <div class=" bg-gradient p-5 shadow-xs rounded-2 mb-5">
-                                                                    <div class="d-flex justify-content-between align-items-center">
-                                                                        <p class="white-color fs-14 mb-0">100 SMS</p> 
-                                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <circle cx="8" cy="8" r="7" fill="#50CD89" stroke="#F5F5F5" stroke-width="2"/>
-                                                                        </svg>
-                                                                     </div>
-                                                                     <p class="white-color fs-25 fw-bold mb-0">$10</p>
-                                                                     <p class="white-color fs-14 mb-0">$0.10 per SMS</p>
-                                                                </div>
-                                                                <div class=" bg-gray p-5 border-1 rounded-2 mt-5">
-                                                                      <div class="d-flex justify-content-between align-items-center">
-                                                                         <p class="dark-color fs-14 mb-0">1,000 SMS</p> 
-                                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <circle cx="8" cy="8" r="8" fill="#DFDFDF"/>
-                                                                        </svg>
-                                                                      </div>
-                                                                      <p class="dark-color fs-25 fw-bold mb-0">$50</p>
-                                                                      <p class="dark-color fs-14 mb-0">$0.05 per SMS</p>
-                                                                 </div>
-                                                                 <div class=" bg-gray p-5 border-1 rounded-2 mt-5">
-                                                                       <div class="d-flex justify-content-between align-items-center">
-                                                                          <p class="dark-color fs-14 mb-0">5,000 SMS</p> 
-                                                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                <circle cx="8" cy="8" r="8" fill="#DFDFDF"/>
-                                                                          </svg>
-                                                                       </div>
-                                                                       <p class="dark-color fs-25 fw-bold mb-0">$100</p>
-                                                                       <p class="dark-color fs-14 mb-0">$0.02 per SMS</p>
-                                                                 </div>
 
+                                                                <!--begin::Row-->
+                                                                        <div class="row mw-500px mb-5" data-kt-buttons="true" data-kt-buttons-target=".form-check-image, .form-check-input">>
+                                                                            <!--begin::Col-->
+                                                                            <div class="col-lg-12">
+                                                                                <label class="form-check-image w-100">
+                                                                                      <div class="form-check-wrapper  p-5">
+                                                                                        <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
+                                                                                              <p class="dark-color fs-14 mb-0">100 SMS</p> 
+                                                                                            <input class="form-check-input" type="radio" value="1" name="option2"  checked/>
+                                                                                        </div>
+                                                                                         <p class="dark-color fs-25 fw-bold mb-0">$10</p>
+                                                                                         <p class="dark-color fs-14 mb-0">$0.10 per SMS</p>
+                                                                                    </div>
+                                                                                </label>
+                                                                            </div>
+                                                                            <!--end::Col-->
+                                                                            
+                                                                            <!--begin::Col-->
+                                                                            <div class="col-lg-12">
+                                                                                <label class="form-check-image w-100">
+                                                                                      <div class="form-check-wrapper  p-5">
+                                                                                        <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
+                                                                                              <p class="dark-color fs-14 mb-0">100 SMS</p> 
+                                                                                            <input class="form-check-input" type="radio" value="1" name="option2"/>
+                                                                                        </div>
+                                                                                         <p class="dark-color fs-25 fw-bold mb-0">$50</p>
+                                                                                         <p class="dark-color fs-14 mb-0">$0.05 per SMS</p>
+                                                                                    </div>
+                                                                                </label>
+                                                                            </div>
+                                                                            <!--end::Col-->
+
+                                                                            <!--begin::Col-->
+                                                                            <div class="col-lg-12">
+                                                                                <label class="form-check-image w-100">
+                                                                                      <div class="form-check-wrapper  p-5">
+                                                                                        <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
+                                                                                              <p class="dark-color fs-14 mb-0">100 SMS</p> 
+                                                                                            <input class="form-check-input" type="radio" value="1" name="option2"/>
+                                                                                        </div>
+                                                                                         <p class="dark-color fs-25 fw-bold mb-0">$100</p>
+                                                                                         <p class="dark-color fs-14 mb-0">$0.02 per SMS</p>
+                                                                                    </div>
+                                                                                </label>
+                                                                            </div>
+                                                                            <!--end::Col-->
+
+                                                                            <!--begin::Col-->
+                                                                            <div class="col-lg-12">
+                                                                                <label class="form-check-image w-100">
+                                                                                      <div class="form-check-wrapper  p-5">
+                                                                                        <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
+                                                                                              <p class="dark-color fs-14 mb-0">100 SMS</p> 
+                                                                                            <input class="form-check-input" type="radio" value="1" name="option2"/>
+                                                                                        </div>
+                                                                                         <p class="dark-color fs-25 fw-bold mb-0">$10</p>
+                                                                                         <p class="dark-color fs-14 mb-0">$0.10 per SMS</p>
+                                                                                    </div>
+                                                                                </label>
+                                                                            </div>
+                                                                            <!--end::Col-->
+
+                                                                            <!--begin::Col-->
+                                                                            <div class="col-lg-12">
+                                                                                <label class="form-check-image w-100">
+                                                                                      <div class="form-check-wrapper bg-gray p-5">
+                                                                                        <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
+                                                                                              <p class="dark-color fs-14 mb-0">100 SMS</p> 
+                                                                                            <input class="form-check-input" type="radio" value="1" name="option2"/>
+                                                                                        </div>
+                                                                                         <p class="dark-color fs-25 fw-bold mb-0">$10</p>
+                                                                                         <p class="dark-color fs-14 mb-0">$0.10 per SMS</p>
+                                                                                    </div>
+                                                                                </label>
+                                                                            </div>
+                                                                            <!--end::Col-->
+                                                                        </div>
+                                                                        <!--end::Row-->
                                                             </div>
                                                             <div id="content-2" style="display: none;">
 
