@@ -6,7 +6,7 @@
 <%@ Register Src="~/Controls/sideBar.ascx" TagPrefix="uc1" TagName="sideBar" %>
 <%@ Register Src="~/Controls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
 <%@ Register Src="~/Controls/footerLinks.ascx" TagPrefix="uc1" TagName="footerLinks" %>
-
+<%@ Register Src="~/Controls/loader.ascx" TagPrefix="uc1" TagName="loader" %>
 
 
 <uc1:head runat="server" ID="head" />
@@ -16,6 +16,7 @@
 <!--end::Head-->
 <!--begin::Body-->
 <body id="kt_app_body" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
+    <uc1:loader runat="server" id="loader" />
     <!--begin::Theme mode setup on page load-->
     <script>
         var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }
@@ -178,10 +179,10 @@
                                                             <div id="content-1">
 
                                                                 <!--begin::Row-->
-                                                                        <div class="row mw-500px mb-5" data-kt-buttons="true" data-kt-buttons-target=".form-check-image, .form-check-input">>
+                                                                        <div class="row mw-500px mb-5" data-kt-buttons="true" data-kt-buttons-target=".form-check-image, .form-check-input">
                                                                             <!--begin::Col-->
                                                                             <div class="col-lg-12">
-                                                                                <label class="form-check-image w-100">
+                                                                                <label class="form-check-image w-100 active">
                                                                                       <div class="form-check-wrapper  p-5">
                                                                                         <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
                                                                                               <p class="dark-color fs-14 mb-0">100 SMS</p> 
