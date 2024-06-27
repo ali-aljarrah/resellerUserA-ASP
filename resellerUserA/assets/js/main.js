@@ -18,14 +18,14 @@ $( document ).ready(function() {
         "hideMethod": "fadeOut"
     };
 
-    // if(document.getElementById("current-date")) {
-    //     document.getElementById("current-date").innerHTML = new Date().getFullYear();
-    // }
+    if(document.getElementById("current-date")) {
+        document.getElementById("current-date").innerHTML = new Date().getFullYear();
+    }
 
-    // $('.loader').fadeOut();
-    // setTimeout(() => {
-    //     $('.loader').removeClass('show');
-    // }, 1500);
+    $('.loader').fadeOut();
+        setTimeout(() => {
+        $('.loader').removeClass('show');
+    }, 1500);
 
     // var url = window.location.pathname;
 

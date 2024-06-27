@@ -67,6 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="403.aspx" />
+    <Content Include="404.aspx" />
+    <Content Include="500.aspx" />
     <Content Include="api_references.aspx" />
     <Content Include="assets\css\custom.css" />
     <Content Include="assets\css\font.css" />
@@ -75,6 +78,12 @@
     <Content Include="assets\img\youtube.png" />
     <Content Include="assets\img\LOGO.svg" />
     <Content Include="assets\js\coverage.js" />
+    <Content Include="assets\js\custom\authentication\reset-password\reset-password.js" />
+    <Content Include="assets\js\custom\authentication\reset-password\reset_func.js" />
+    <Content Include="assets\js\custom\authentication\sign-in\general.js" />
+    <Content Include="assets\js\custom\authentication\sign-in\two-fa-other.js" />
+    <Content Include="assets\js\custom\authentication\sign-in\two-factor.js" />
+    <Content Include="assets\js\custom\authentication\sign-up\general.js" />
     <Content Include="assets\js\hlr.js" />
     <Content Include="assets\js\hlr_log.js" />
     <Content Include="assets\js\main.js" />
@@ -2160,9 +2169,11 @@
     <Content Include="Controls\footer.ascx" />
     <Content Include="Controls\footerLinks.ascx" />
     <Content Include="Controls\head.ascx" />
+    <Content Include="Controls\loader.ascx" />
     <Content Include="Controls\menuTop.ascx" />
     <Content Include="Controls\sideBar.ascx" />
     <Content Include="cov.aspx" />
+    <Content Include="forgot.aspx" />
     <Content Include="groups_manager.aspx" />
     <Content Include="help.aspx" />
     <Content Include="hlr.aspx" />
@@ -2171,6 +2182,7 @@
     <Content Include="login.aspx" />
     <Content Include="paymentsreport.aspx" />
     <Content Include="queuereport.aspx" />
+    <Content Include="register.aspx" />
     <Content Include="reload.aspx" />
     <Content Include="reloadreport.aspx" />
     <Content Include="send_sms.aspx" />
@@ -2180,6 +2192,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="403.aspx.cs">
+      <DependentUpon>403.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="403.aspx.designer.cs">
+      <DependentUpon>403.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="500.aspx.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="500.aspx.designer.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+    </Compile>
     <Compile Include="api_references.aspx.cs">
       <DependentUpon>api_references.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2215,6 +2248,12 @@
     <Compile Include="Controls\head.ascx.designer.cs">
       <DependentUpon>head.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\loader.ascx.cs">
+      <DependentUpon>loader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\loader.ascx.designer.cs">
+      <DependentUpon>loader.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\menuTop.ascx.cs">
       <DependentUpon>menuTop.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2235,6 +2274,13 @@
     </Compile>
     <Compile Include="cov.aspx.designer.cs">
       <DependentUpon>cov.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgot.aspx.cs">
+      <DependentUpon>forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgot.aspx.designer.cs">
+      <DependentUpon>forgot.aspx</DependentUpon>
     </Compile>
     <Compile Include="groups_manager.aspx.cs">
       <DependentUpon>groups_manager.aspx</DependentUpon>
@@ -2292,6 +2338,13 @@
     </Compile>
     <Compile Include="queuereport.aspx.designer.cs">
       <DependentUpon>queuereport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
     </Compile>
     <Compile Include="reload.aspx.cs">
       <DependentUpon>reload.aspx</DependentUpon>
@@ -2379,6 +2432,8 @@
     <Content Include="assets\plugins\global\fonts\line-awesome\la-solid-900.ttf" />
     <Content Include="assets\plugins\global\fonts\line-awesome\la-solid-900.woff" />
     <Content Include="assets\plugins\global\fonts\line-awesome\la-solid-900.woff2" />
+    <Content Include="assets\img\login-img.webp" />
+    <Content Include="assets\img\error-img.webp" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -218,12 +218,28 @@ span.menu-link.menu-center:hover i.ki-duotone.ki-setting-2.icon-header{
     font-size: 20px !important;
 }
 
+.fs-24 {
+    font-size: 24px;
+}
+
 .fs-25 {
     font-size: 25px;
 }
 
 .fs-55 {
     font-size: 55px;
+}
+
+.fs-56 {
+    font-size: 56px;
+}
+
+.fs-32 {
+    font-size: 32px !important;
+}
+
+.fs-96 {
+    font-size: 96px;
 }
 
 .form-custom-input,
@@ -266,6 +282,13 @@ span.menu-link.menu-center:hover i.ki-duotone.ki-setting-2.icon-header{
         color: #fff;
         transition: all 0.3s ease-in-out;
     }
+
+.text-btn-grad {
+    background: linear-gradient(to right, #0085FF, #FFFFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .dashed-bottom-table tr {
     border-bottom: 2px dashed rgba(0, 0, 0, 0.2) !important;
@@ -319,16 +342,6 @@ span.menu-link.menu-center:hover i.ki-duotone.ki-setting-2.icon-header{
 
 .template-border-bottom {
     border-bottom: 1px dashed rgba(0, 0, 0, 0.20);
-}
-
-.form-control.form-control-solid {
-    border-color: #000;
-    border: 1px solid #80808000;
-    border-bottom: 1px solid black;
-    color: var(--bs-gray-700);
-    transition: color .2s ease;
-    border-radius: 0px;
-    background-color: #f0f8ff00;
 }
 
 button.btn.btn-secondary.buttons-csv.buttons-html5,
@@ -418,36 +431,4 @@ button.btn.btn-secondary.buttons-pdf.buttons-html5 {
 
 .border-1 {
     border: 1px solid #e3e2e2;
-}
-.form-check-image.active:not(.form-check-success):not(.form-check-danger) .form-check-wrapper {
-    border-color: #f1f1f1 !important;
-    background: -webkit-linear-gradient(#0E41C1, #0047FF) !important;
-}
-.form-check-image:not(.form-check-success):not(.form-check-danger) .form-check-wrapper {
-    border-color: gray !important;
-    background: #f8f5ff !important;
-}
-
-
-.form-check-image.active:not(.form-check-success):not(.form-check-danger) .form-check-wrapper .form-check-input:checked {
-    background-color: #37d52f;
-    border-color: #ffffff;
-}
-
-.form-check-input {
-    --bs-form-check-bg: #cecece;
-}
-
-.form-check-image.active:not(.form-check-success):not(.form-check-danger) .form-check-wrapper p.dark-color.fs-25.fw-bold.mb-0 {
-    color: #fff;
-}
-
-
-.form-check-image.active p.dark-color.fs-14.mb-0 {
-    color: #fff;
-}
-
-.form-check-input:checked[type=radio] {
-    background-color: #37d52f;
-    border-color: #ffffff;
 }

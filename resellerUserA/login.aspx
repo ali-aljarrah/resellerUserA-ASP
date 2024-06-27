@@ -5,7 +5,7 @@
 <html lang="en">
 	<!--begin::Head-->
 	<head>
-	
+	    <title>Reseller - Login</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="shortcut icon" href="/assets/img/LOGO.svg" />
@@ -24,7 +24,7 @@
 		</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_body" class="app-blank">
+	<body id="kt_body" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
         <!--<?php include 'include/loader.php' ?> -->
 		<!--begin::Theme mode setup on page load-->
 		<script>
@@ -47,77 +47,73 @@
 					<div class="d-flex flex-center flex-column flex-lg-row-fluid">
 						<!--begin::Wrapper-->
 						<div class="w-lg-500px p-10">
-                            <form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate" id="kt_sign_in_form" name="kt_sign_in_form" data-kt-redirect-url="/" action="login" method="post">
-                                <div class="text-center mb-10">
-                                    <a href="/">
-                                        <div style="
-                                            text-align: center;
-                                            font-weight: 600;
-                                            width: 100%; 
-                                            height: 40px; 
-                                            border-radius: 8px; 
-                                            background: #D9D9D9; 
-                                            color:rgba(18, 18, 18, 1); 
-                                            padding: 8px;">
-                                            LOGO
+                            <form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate" id="kt_sign_in_form" runat="server" name="kt_sign_in_form" data-kt-redirect-url="/" action="login.aspx" method="post">
+                                <!--begin::List widget 10-->
+                                <div class="card card-flush shadow-xs">
+                                    <!--begin::Header-->
+                                    <div class="card-header d-block pt-7">
+                                        <!--begin::Title-->
+                                        <h3 class="card-title card-label fs-32 fw-bold color-black-1">
+                                       Sign in
+                                        </h3>
+                                        <!--end::Title-->
+                                        <p class="color-neutral-grey mt-1 fs-14">
+                                        If there are too many failed login attempts your account will be locked for 60 minutes.
+                                        </p>
+                                    </div>
+                                    <!--end::Header-->
+                                    <!--begin::Body-->
+                                    <div class="card-body">
+                                        <div class="fv-row mb-8 fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
+                                            <!--begin::Email-->
+                                            <label for="email" class="form-label fs-14 dark-color required">Username/ Email</label>
+                                            <input type="text" placeholder="Username/ Email" name="email" id="email" runat="server" autocomplete="off" class="form-control form-control-solid">
+                                            <!--end::Email-->
+                                        <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                        <!--end::Input group=-->
+                                        <div class="fv-row mb-3 fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
+                                            <!--begin::Password-->
+                                            <label for="password" class="form-label fs-14 dark-color required">Password</label>
+                                            <input type="password" placeholder="Password" name="password" id="password" runat="server" autocomplete="off" class="form-control form-control-solid">
+                                            <!--end::Password-->
+                                        <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                        <!--end::Input group-->
+                                        <div>
+                                            <div id="recaptcha" class="g-recaptcha " style="position: fixed; bottom: 0; right: 0;" data-badge="bottomright" data-style="bottomright" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="onSubmit" data-size="invisible"></div>
                                         </div>
-                                    </a>
-                                </div>
-                                <!--begin::Heading-->
-                                <div class="mb-11">
-                                    <!--begin::Title-->
-                                    <h1 class="dark-color fw-bolder mb-3">Sign in</h1>
-                                    <p class="fs-16 grey-color">
-                                    If there are too many failed login attempts your account will be locked for 60 minutes.
-                                    </p>
-                                    <!--end::Title-->
-                                </div>
-                                <!--begin::Heading-->
-                                <!--begin::Input group=-->
-                                <div class="fv-row mb-8 fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
-                                    <!--begin::Email-->
-                                    <label for="email" class="form-label fs-14 dark-color required">Username/ Email</label>
-                                    <input type="text" placeholder="Username/ Email" name="email" autocomplete="off" class="form-control form-control-solid">
-                                    <!--end::Email-->
-                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
-                                <!--end::Input group=-->
-                                <div class="fv-row mb-3 fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
-                                    <!--begin::Password-->
-                                    <label for="password" class="form-label fs-14 dark-color required">Password</label>
-                                    <input type="password" placeholder="Password" name="password" autocomplete="off" class="form-control form-control-solid">
-                                    <!--end::Password-->
-                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
-                                <!--end::Input group-->
-                                <div>
-                                    <div id="recaptcha" class="g-recaptcha " style="position: fixed; bottom: 0; right: 0;" data-badge="bottomright" data-style="bottomright" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="onSubmit" data-size="invisible"></div>
-                                </div>
-                                <!--begin::Submit button-->
-                                <div class="d-grid my-10">
-                                    <button type="submit" id="kt_sign_in_submit" class="btn btn-dark py-2 px-8 rounded-3 w-100" data-kt-indicator="off">
-                                        <!--begin::Indicator label-->
-                                        <span class="indicator-label">Sign In</span>
-                                        <!--end::Indicator label-->
-                                        <!--begin::Indicator progress-->
-                                        <span class="indicator-progress">Please wait...
-                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                                        <!--end::Indicator progress-->
-                                    </button>
-                                </div>
-                                <!--end::Submit button-->
-                                <!--begin::Sign up-->
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <a href="/register" class="link-primary">Don't have an account?</a>
-                                    </div>
-                                    <div>
-                                    <a href="/forgot" class="link-primary">Forgot Password ?</a>
-                                    </div>
-                                </div>
-                                <!--end::Sign up-->
+                                        <!--begin::Submit button-->
+                                        <div class="d-grid my-10">
+                                            <button type="submit" id="kt_sign_in_submit" runat="server" class="btn btn-grad-1 py-2 px-8 rounded-3 w-100" data-kt-indicator="off">
+                                                <!--begin::Indicator label-->
+                                                <span class="indicator-label">Sign In</span>
+                                                <!--end::Indicator label-->
+                                                <!--begin::Indicator progress-->
+                                                <span class="indicator-progress">Please wait...
+                                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                <!--end::Indicator progress-->
+                                            </button>
+                                        </div>
+                                        <!--end::Submit button-->
+                                        <!--begin::Sign up-->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <a href="/register.aspx" class="link-primary text-decoration-underline">Don't have an account?</a>
+                                            </div>
+                                            <div>
+                                            <a href="/forgot.aspx" class="link-primary text-decoration-underline">Forgot Password ?</a>
+                                            </div>
+                                        </div>
+                                        <!--end::Sign up-->
 
-                                <input type="hidden" value="{593AA78F-2A73-425B-BF35-65578491E64E}" name="token">
-                                <input type="hidden" value="1da8810186435fedecd66694940d2d0bd2636fa737750f5f36518d43e32030e5||undefined" name="fpuser" id="fpuser">
-                                <input type="hidden" value="1da8810186435fedecd66694940d2d0bd2636fa737750f5f36518d43e32030e5" name="fpuser_id" id="fpuser_id">
+                                        <input type="hidden" value="{593AA78F-2A73-425B-BF35-65578491E64E}" name="token">
+                                        <input type="hidden" value="1da8810186435fedecd66694940d2d0bd2636fa737750f5f36518d43e32030e5||undefined" name="fpuser" id="fpuser">
+                                        <input type="hidden" value="1da8810186435fedecd66694940d2d0bd2636fa737750f5f36518d43e32030e5" name="fpuser_id" id="fpuser_id">
+                                    </div>
+                                    <!--end: Card Body-->
+                                </div>
+                                <!--end::List widget 10-->
+                                <!--begin::Input group=-->
+                                
 							</form>
 						</div>
 						<!--end::Wrapper-->
@@ -129,11 +125,18 @@
 					<!--begin::Content-->
 					<div class="d-flex justify-content-center align-items-center flex-column py-7 py-lg-15 px-5 px-lg-20 w-100">
                         <div class="px-lg-20 px-5">
+                            <div>
+                                <img class="img-fluid" width="580" height="431" loading="lazy" src="assets/img/login-img.webp" alt="Login image" />
+                            </div>
                             <!--begin::Title-->
-                            <h1 class="d-none d-lg-block text-white fw-bolder fs-56 mb-7"></h1>
+                            <h1 class="d-none d-lg-block text-white fw-bolder fs-55 mb-7">
+                                <span class="text-btn-grad">Unlock profits</span> with every text.
+                            </h1>
                             <!--end::Title-->
                             <!--begin::Text-->
-                            <div class="d-none d-lg-block text-white fs-16"></div>
+                            <div class="d-none d-lg-block text-white fs-16">
+                                Earn additional revenue by buying and then reselling SMS credits to their customers. A reseller buys SMS credits in bulk and sells them in smaller batches to their customers.
+                            </div>
                             <!--end::Text-->
                         </div>
 					</div>

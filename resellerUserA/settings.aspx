@@ -6,7 +6,7 @@
 <%@ Register Src="~/Controls/sideBar.ascx" TagPrefix="uc1" TagName="sideBar" %>
 <%@ Register Src="~/Controls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
 <%@ Register Src="~/Controls/footerLinks.ascx" TagPrefix="uc1" TagName="footerLinks" %>
-
+<%@ Register Src="~/Controls/loader.ascx" TagPrefix="uc1" TagName="loader" %>
 
 <uc1:head runat="server" ID="head" />
 
@@ -15,6 +15,7 @@
 <!--end::Head-->
 <!--begin::Body-->
 <body id="kt_app_body" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
+    <uc1:loader runat="server" id="loader" />
     <!--begin::Theme mode setup on page load-->
     <script>
         var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }
@@ -358,7 +359,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="text-start">
-                                                                            <button type="submit" id="btnsubmit_personal" name="btnsubmit_personal" value="Save" class="btn btn-primary btn-grad py-2 px-8 rounded-1">
+                                                                            <button type="submit" id="btnsubmit_personal" name="btnsubmit_personal" value="Save" class="btn btn-grad py-2 px-8 rounded-1">
                                                                                 <span class="indicator-label">Edit profile</span>
                                                                                 <span class="indicator-progress">
                                                                                     <span class="spinner-border text-white" role="status">
@@ -425,7 +426,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="text-start">
-                                                                                <button type="submit" id="btnsubmit_password" name="btnsubmit_password" value="Save" class="btn btn-primary btn-grad py-2 px-8 rounded-1">
+                                                                                <button type="submit" id="btnsubmit_password" name="btnsubmit_password" value="Save" class="btn btn-grad py-2 px-8 rounded-1">
                                                                                     <span class="indicator-label">Save changes</span>
                                                                                     <span class="indicator-progress">
                                                                                         <span class="spinner-border text-white" role="status">
@@ -462,7 +463,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="text-start">
-                                                                                <button type="submit" id="btnsubmit_2fa" name="btnsubmit_2fa" value="Save" class="btn btn-primary btn-grad py-2 px-8 rounded-1">
+                                                                                <button type="submit" id="btnsubmit_2fa" name="btnsubmit_2fa" value="Save" class="btn btn-grad py-2 px-8 rounded-1">
                                                                                     <span class="indicator-label">Save changes</span>
                                                                                     <span class="indicator-progress">
                                                                                         <span class="spinner-border text-white" role="status">
@@ -500,7 +501,7 @@
                                                                                         Enhance the security of your API access by setting a unique API password. By default, the API uses the same login password, but you can ensure separate authentication for better protection.
                                                                                         </p>
                                                                                     </div>
-                                                                                    <button type="submit" id="btnsubmit_api_pass" name="btnsubmit_api_pass" value="Save" class="btn btn-primary btn-grad py-2 px-8 rounded-1 w-fit">
+                                                                                    <button type="submit" id="btnsubmit_api_pass" name="btnsubmit_api_pass" value="Save" class="btn btn-grad py-2 px-8 rounded-1 w-fit">
                                                                                         <span class="indicator-label">Save</span>
                                                                                         <span class="indicator-progress">
                                                                                             <span class="spinner-border text-white" role="status">
@@ -519,7 +520,7 @@
                                                                                         Take a proactive approach to protect your API from unauthorized access. Enable IP whitelisting in this section to restrict HTTP(s) API requests to trusted IP addresses only. 
                                                                                         </p>
                                                                                     </div>
-                                                                                    <button type="submit" id="btnsubmit_api_ip" name="btnsubmit_api_ip" value="Save" class="btn btn-primary btn-grad py-2 px-8 rounded-1 w-fit">
+                                                                                    <button type="submit" id="btnsubmit_api_ip" name="btnsubmit_api_ip" value="Save" class="btn btn-grad py-2 px-8 rounded-1 w-fit">
                                                                                         <span class="indicator-label">Save</span>
                                                                                         <span class="indicator-progress">
                                                                                             <span class="spinner-border text-white" role="status">
@@ -551,7 +552,7 @@
                                                                                 </p>
                                                                             </div>
                                                                             <div class="text-start">
-                                                                                <button type="submit" id="btnsubmit_dlr" name="btnsubmit_dlr" value="Save" class="btn btn-primary btn-grad py-2 px-8 rounded-1 w-fit">
+                                                                                <button type="submit" id="btnsubmit_dlr" name="btnsubmit_dlr" value="Save" class="btn btn-grad py-2 px-8 rounded-1 w-fit">
                                                                                     <span class="indicator-label">Save</span>
                                                                                     <span class="indicator-progress">
                                                                                         <span class="spinner-border text-white" role="status">
@@ -606,7 +607,7 @@
                                                                                                         <input class="form-control form-control-solid" type="email" disabled="" value="" name="low_balance_email" id="low_balance_email" required="" placeholder="Email address to notify">
                                                                                                     </div>
                                                                                                     <div class="text-start mt-5">
-                                                                                                        <button type="submit" id="btnsubmit_alert" name="btnsubmit_alert" value="Save" class="btn btn-primary btn-grad py-2 px-8 rounded-1">
+                                                                                                        <button type="submit" id="btnsubmit_alert" name="btnsubmit_alert" value="Save" class="btn btn-grad py-2 px-8 rounded-1">
                                                                                                             <span class="indicator-label">Save changes</span>
                                                                                                             <span class="indicator-progress">
                                                                                                                 <span class="spinner-border text-white" role="status">

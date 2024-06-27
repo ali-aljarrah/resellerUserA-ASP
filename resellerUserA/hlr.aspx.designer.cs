@@ -24,6 +24,15 @@ namespace resellerUserA
         protected global::resellerUserA.Controls.head head;
 
         /// <summary>
+        /// loader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::resellerUserA.Controls.loader loader;
+
+        /// <summary>
         /// menuTop1 control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,24 @@ namespace resellerUserA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::resellerUserA.Controls.sideBar sideBar;
+
+        /// <summary>
+        /// hlr_lookup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm hlr_lookup;
+
+        /// <summary>
+        /// number control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText number;
 
         /// <summary>
         /// footer control.
