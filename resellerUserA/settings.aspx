@@ -63,7 +63,6 @@
                                                             <a class="nav-link" data-bs-toggle="tab" href="#notifications_tab">Notifications</a>
                                                         </li>
                                                     </ul>
-
                                                     <div class="tab-content mt-8" id="myTabContent">
                                                         <div class="tab-pane fade show active" id="profile_tab" role="tabpanel">
                                                             <div class="row">
@@ -74,7 +73,7 @@
                                                                         <!--begin::Title-->
                                                                         <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Profile Details</h1>
                                                                         <p class="fs-14 color-neutral-grey">
-                                                                        You can change your name, update your contact information, and other details to make your account feel more personalized.
+                                                                             You can change your name, update your contact information, and other details to make your account feel more personalized.
                                                                         </p>
                                                                         <!--end::Title-->
                                                                     </div>
@@ -105,7 +104,6 @@
                                                                                     <div class="form-custom-input form-control your-class">test@test.com</div>
                                                                                 </div>
                                                                             </div>
-                                                                            
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Country:</label>
