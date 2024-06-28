@@ -67,7 +67,8 @@
                                                     <div class="tab-content mt-8" id="myTabContent">
                                                         <div class="tab-pane fade show active" id="profile_tab" role="tabpanel">
                                                             <div class="row">
-                                                                <div class="col-md-8">
+                                                                <div class="col-md-12">
+                                                                    <div class="card-body shadow-xs rounded-4">
                                                                     <!--begin::Page title-->
                                                                     <div class="page-title d-flex flex-column justify-content-center gap-1">
                                                                         <!--begin::Title-->
@@ -371,8 +372,10 @@
                                                                     </form>
                                                                 </div>
                                                             </div>
+                                                          </div>
                                                             <div class="row mt-5">
-                                                                <div class="col-md-8 pt-5">                                                                    
+                                                                <div class="col-md-12 pt-5">    
+                                                                    <div class="card-body shadow-xs rounded-4">
                                                                       <div class="page-title d-flex flex-column justify-content-center gap-1">
                                                                             <!--begin::Title-->
                                                                             <h4 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Profile Picture Upload Guidelines</h4>
@@ -393,12 +396,13 @@
                                                                             </ul>
                                                                             <!--end::Title-->
                                                                         </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="tab-pane fade" id="security_tab" role="tabpanel">
                                                             <div class="row">
-                                                                <div class="col-md-8">
+                                                                <div class="col-md-12">
                                                                     <div>
                                                                         <!--begin::Page title-->
                                                                         <div class="page-title d-flex flex-column justify-content-center gap-1">
