@@ -11,7 +11,7 @@
 
 <uc1:head runat="server" ID="head" />
 
-<title>Pending SMS Group Queue</title>
+<title>Lookup Log</title>
 </head>
 <!--end::Head-->
 <!--begin::Body-->

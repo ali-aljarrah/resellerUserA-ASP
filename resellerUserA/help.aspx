@@ -10,7 +10,7 @@
 
 <uc1:head runat="server" ID="head" />
 
-<title>Sent SMS Report</title>
+<title>Help</title>
 </head>
 <!--end::Head-->
 <!--begin::Body-->

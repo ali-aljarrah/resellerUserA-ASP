@@ -159,7 +159,7 @@
 												<div class="col-lg-4 mb-xl-10">
 													<!--begin::Chart Widget 47-->
 													<!--begin::Chart Widget 48-->
-													<div class="card card-flush shadow-xs bg-blue">
+													<div class="card card-flush shadow-xs bg-blue mb-1">
 														<div class="d-flex align-items-start">
 															<!--begin::Wrapper-->
 															<div class="d-flex flex-stack flex-row-fluid p-4">

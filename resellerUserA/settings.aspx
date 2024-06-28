@@ -10,7 +10,7 @@
 
 <uc1:head runat="server" ID="head" />
 
-<title>Single Lookup</title>
+<title>Settings</title>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
