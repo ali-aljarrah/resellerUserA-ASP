@@ -150,7 +150,7 @@
                                                                            </svg>
                                                                       </button>
                                                                 </div>
-                                                            <!-- <p class="gray fs-14">
+                                                             <p class="gray fs-14">
                                                                 Choose the price package that suits your needs best. Click the button to pay securely and effortlessly, unlocking a world of benefits tailored just for you.
                                                             </p>
                                                             <div class="d-flex justify-content-start align-items-center">
@@ -175,16 +175,16 @@
                                                                     <span class="fs-12 ps-1">Crypto</span>
                                                              </button>
                                                           
-                                                                </div>-->
+                                                                </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
-                                                        <div style="max-height: 430px ;min-height: 430px;overflow-y: scroll;">
+                                                        <div class="d-scroll" style="max-height: 430px ;min-height: 430px;overflow-y: scroll;">
                                                            <!--tab 1-->
                                                          <div id="Standard" class="tabcontent">
                                                                 <!--begin::Row-->
                                                                <div class="row mw-500px mb-5" data-kt-buttons="true" data-kt-buttons-target=".form-check-image, .form-check-input">
-                                                                     <div class="col-lg-12">
+                                                                            <div class="col-lg-12">
                                                                          <label class="form-check-image w-100 active">
                                                                               <div class="form-check-wrapper  p-5">
                                                                                 <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
@@ -196,20 +196,20 @@
                                                                             </div>
                                                                         </label>
                                                                      </div>
-                                                                 </div>
+                                                                 
                                                                             <!--begin::Col-->
-                                                                            <div class="col-lg-12">
-                                                                                <label class="form-check-image w-100">
-                                                                                      <div class="form-check-wrapper  p-5">
-                                                                                        <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
-                                                                                              <p class="dark-color fs-14 mb-0">100 SMS</p> 
-                                                                                            <input class="form-check-input" type="radio" value="1" name="option2"  checked/>
-                                                                                        </div>
-                                                                                         <p class="dark-color fs-25 fw-bold mb-0">$10</p>
-                                                                                         <p class="dark-color fs-14 mb-0">$0.10 per SMS</p>
-                                                                                    </div>
-                                                                                </label>
-                                                                            </div>
+                                                                             <div class="col-lg-12">
+                                                                                 <label class="form-check-image w-100">
+                                                                                       <div class="form-check-wrapper  p-5">
+                                                                                         <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
+                                                                                               <p class="dark-color fs-14 mb-0">100 SMS</p> 
+                                                                                             <input class="form-check-input" type="radio" value="1" name="option2"/>
+                                                                                         </div>
+                                                                                          <p class="dark-color fs-25 fw-bold mb-0">$100</p>
+                                                                                          <p class="dark-color fs-14 mb-0">$0.02 per SMS</p>
+                                                                                     </div>
+                                                                                 </label>
+                                                                             </div>
                                                                             <!--end::Col-->
                                                                             
                                                                             <!--begin::Col-->
@@ -242,7 +242,7 @@
                                                                             </div>
                                                               </div>
                                                                             <!--end::Col-->
-
+                                                            </div>
                                                                      <!--tab 2-->
                                                                  <div id="High" class="tabcontent">
                                                                        <!--begin::Row-->
@@ -276,23 +276,24 @@
                                                                                           </div>
                                                                                       </label>
                                                                                   </div>
+                                                                     </div>
                                                                  </div>
                                                                      <!--tab 3-->
                                                                  <div id="HLR" class="tabcontent">
                                                                         <!--begin::Row-->
-                                                                 <div class="row mw-500px mb-5" data-kt-buttons="true" data-kt-buttons-target=".form-check-image, .form-check-input">
-                                                                       <div class="col-lg-12">
-                                                                           <label class="form-check-image w-100 active">
-                                                                                <div class="form-check-wrapper  p-5">
-                                                                                  <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
-                                                                                        <p class="dark-color fs-14 mb-0">testtttttt</p> 
-                                                                                      <input class="form-check-input" type="radio" value="1" name="option2"  checked/>
-                                                                                  </div>
-                                                                                   <p class="dark-color fs-25 fw-bold mb-0">$10</p>
-                                                                                   <p class="dark-color fs-14 mb-0">$0.10 per SMS</p>
-                                                                              </div>
-                                                                          </label>
-                                                                       </div>
+                                                                   <div class="row mw-500px mb-5" data-kt-buttons="true" data-kt-buttons-target=".form-check-image, .form-check-input">
+                                                                        <div class="col-lg-12">
+                                                                             <label class="form-check-image w-100">
+                                                                                   <div class="form-check-wrapper  p-5">
+                                                                                     <div class="form-check-label  form-check-custom form-check-solid justify-content-between">
+                                                                                           <p class="dark-color fs-14 mb-0">100 SMS</p> 
+                                                                                         <input class="form-check-input" type="radio" value="1" name="option2"/>
+                                                                                     </div>
+                                                                                      <p class="dark-color fs-25 fw-bold mb-0">$100</p>
+                                                                                      <p class="dark-color fs-14 mb-0">$0.02 per SMS</p>
+                                                                                 </div>
+                                                                             </label>
+                                                                         </div>
                                                                               <!--begin::Col-->
                                                                               <div class="col-lg-12">
                                                                                   <label class="form-check-image w-100">
@@ -321,13 +322,13 @@
                                                                                       </div>
                                                                                   </label>
                                                                               </div>
-                                                                        </div>
-                                                                 </div>
-                                                        </div>
+                                                                   </div>
+                                                                </div>
+                                                        
                                                          </div>
                                                       </div>
-                                                   </div>
                                                 </div>
+                                            </div>
                                                 <hr class="my-5"/>
                                                <div class="row mt-5">
                                                     <div class="col-md-12">

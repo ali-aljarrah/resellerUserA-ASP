@@ -461,36 +461,14 @@ button.btn.btn-secondary.buttons-pdf.buttons-html5 {
 input.form-check-input {
     background: lightgrey;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 button.tablinks.active {
-    background: red !important;
+    background: -webkit-linear-gradient(#0E41C1, #0047FF) !important;
     color: #FFF !important;
 }
-
-
-
 
 /* Style the tab */
 .tab {
     float: left;
-    background-color: palevioletred;
     width: 100%;
     height: 300px;
 }
@@ -529,3 +507,15 @@ button.tablinks.active {
     border-left: none;
     height: 300px;
 }
+
+
+
+
+d-scroll {
+    scrollbar-width: thin !important;
+    scrollbar-color: red !important;
+}
+
+
+
+
