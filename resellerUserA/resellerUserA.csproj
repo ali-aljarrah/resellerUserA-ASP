@@ -97,6 +97,7 @@
     <Content Include="assets\js\sendbulk.js" />
     <Content Include="assets\js\sendsms.js" />
     <Content Include="assets\js\sentreport.js" />
+    <Content Include="assets\js\settings.js" />
     <Content Include="assets\media\auth\404-error-dark.png" />
     <Content Include="assets\media\auth\404-error.png" />
     <Content Include="assets\media\auth\500-error-dark.png" />

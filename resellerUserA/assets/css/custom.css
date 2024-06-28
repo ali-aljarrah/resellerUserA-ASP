@@ -81,36 +81,16 @@ span.menu-link, span.menu-link.menu-center:hover svg path {
     transition: all .3s ease-in-out !important;
 }
 
-    span.menu-link.menu-center:hover {
+    span.menu-link.menu-center:hover, span.menu-link.menu-center.active {
         background-color: #0e41c1;
     }
 
-        /* span.menu-link.menu-center:hover i.ki-duotone.ki-home-2.icon-header{
-    color: #fff !important;
-    border-radius: 10px;
-}
-
-span.menu-link.menu-center:hover i.ki-duotone.ki-star.icon-header{
-    color: #fff !important;
-}
-
-span.menu-link.menu-center:hover i.ki-duotone.ki-message-text-2.icon-header{
-    color: #fff !important;
-} */
-
-        span.menu-link.menu-center:hover svg path {
+        span.menu-link.menu-center:hover svg path, span.menu-link.menu-center.active svg path {
             fill: #fff !important;
         }
 
-        span.menu-link.menu-center:hover svg.have-sec-child path:nth-child(2) {
+        span.menu-link.menu-center:hover svg.have-sec-child path:nth-child(2), span.menu-link.menu-center.active svg.have-sec-child path:nth-child(2) {
             fill: #0e41c1 !important;
-        }
-
-        span.menu-link.menu-center:hover .ki-duotone,
-        .ki-outline,
-        .ki-solid.icon-header {
-            color: #fff !important;
-            font-size: 2rem;
         }
 
 .ki-duotone,
@@ -120,25 +100,6 @@ span.menu-link.menu-center:hover i.ki-duotone.ki-message-text-2.icon-header{
     font-size: 2.3rem !important;
     color: #0e41c1 !important;
 }
-/* span.menu-link.menu-center:hover i.ki-duotone.ki-chart-pie-4.icon-header{
-    color: #fff !important;
-}
-
-span.menu-link.menu-center:hover i.ki-duotone.ki-wallet.icon-header{
-    color: #fff !important;
-}
-
-span.menu-link.menu-center:hover i.ki-duotone.ki-pin.icon-header{
-    color: #fff !important;
-}
-
-span.menu-link.menu-center:hover i.ki-duotone.ki-geolocation.icon-header{
-    color: #fff !important;
-}
-
-span.menu-link.menu-center:hover i.ki-duotone.ki-setting-2.icon-header{
-    color: #fff !important;
-} */
 
 /* end sidebar */
 
@@ -506,6 +467,13 @@ button.tablinks.active {
     width: 100%;
     border-left: none;
     height: 300px;
+}
+
+@media(max-width: 991px) {
+    .app-sidebar {
+        height: auto !important;
+    }
+}
 }
 
 

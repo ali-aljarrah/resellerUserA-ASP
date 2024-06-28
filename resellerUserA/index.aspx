@@ -384,59 +384,6 @@
 												<div class="d-flex justify-content-center pt-1 mt-1">
 													<canvas id="kt_chartjs_3" class="mh-300px mb-4"></canvas>
 												</div>
-												<!-- <div class="row justify-content-center p-3 mt-5 pb-5">
-															<div class="col-lg-4 d-flex justify-content-center pt-5">
-																<h6 class=" align-items-start flex-column">
-																	<span class=" fw-bold text-gray-800">
-																		<svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<ellipse cx="5.5" cy="4.5" rx="5" ry="4.5" fill="#DFDFDF"/>
-																			<defs>
-																			<linearGradient id="paint0_linear_943_46551" x1="5.5" y1="0" x2="5.5" y2="9" gradientUnits="userSpaceOnUse">
-																			<stop stop-color="#0E41C1" stop-opacity="0.870588"/>
-																			<stop offset="1" stop-color="#0047FF" stop-opacity="0.870588"/>
-																			</linearGradient>
-																			</defs>
-																		</svg>
-																		Undelivered
-																	</span>
-																	<span class="gray ps-5 pt-2">40%</span>
-																</h6>
-															</div>
-															<div class="col-lg-4 d-flex justify-content-center pt-5">
-																<h6 class=" align-items-start flex-column d-flex">
-																	<span class=" fw-bold text-gray-800">
-																	<svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<ellipse cx="5.5" cy="4.5" rx="5" ry="4.5" fill="#FFC700"/>
-																		<defs>
-																		<linearGradient id="paint0_linear_943_46551" x1="5.5" y1="0" x2="5.5" y2="9" gradientUnits="userSpaceOnUse">
-																		<stop stop-color="#0E41C1" stop-opacity="0.870588"/>
-																		<stop offset="1" stop-color="#0047FF" stop-opacity="0.870588"/>
-																		</linearGradient>
-																		</defs>
-																	</svg>
-																		Pending
-																	</span>
-																	<span class="gray ps-5">32%</span>
-																</h6>
-															</div>
-															<div class="col-lg-4 d-flex justify-content-center pt-5">
-																<h6 class="align-items-start flex-column">
-																	<span class=" fw-bold text-gray-800">
-																	    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<ellipse cx="5.5" cy="4.5" rx="5" ry="4.5" fill="url(#paint0_linear_943_46551)"/>
-																				<defs>
-																				<linearGradient id="paint0_linear_943_46551" x1="5.5" y1="0" x2="5.5" y2="9" gradientUnits="userSpaceOnUse">
-																				<stop stop-color="#0E41C1" stop-opacity="0.870588"/>
-																				<stop offset="1" stop-color="#0047FF" stop-opacity="0.870588"/>
-																				</linearGradient>
-																				</defs>
-																		</svg>
-																		Delivered
-																	</span>
-																	<span class="gray ps-5">28%</span>
-																</h6>
-															</div>
-												</div> -->
 											</div>
 											<!--end::Table Widget 9-->
 										</div>

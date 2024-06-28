@@ -83,32 +83,32 @@
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Name:</label>
-                                                                                    <input class="form-control-solid form-control" value="" type="text" name="name" id="name" required="" placeholder="Enter full name">
+                                                                                    <input class="form-custom-input form-control" value="" type="text" name="name" id="name" required="" placeholder="Enter full name">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Phone Number:</label>
-                                                                                    <input class="form-control-solid form-control" value="" type="text" name="phone" id="phone" maxlength="21" required="" placeholder="Enter your phone number">
+                                                                                    <input class="form-custom-input form-control" value="" type="text" name="phone" id="phone" maxlength="21" required="" placeholder="Enter your phone number">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Company Name:</label>
-                                                                                    <input class="form-control-solid form-control" value="" type="text" name="company" id="company" required="" placeholder="Enter company name">
+                                                                                    <input class="form-custom-input form-control" value="" type="text" name="company" id="company" required="" placeholder="Enter company name">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Email:</label>
-                                                                                    <div class="form-control-solid form-control your-class">test@test.com</div>
+                                                                                    <div class="form-custom-input form-control your-class">test@test.com</div>
                                                                                 </div>
                                                                             </div>
                                                                             
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Country:</label>
-                                                                                    <select name="country" id="country" class="form-select form-control-solid" aria-label="">
+                                                                                    <select name="country" id="country" class="form-select form-custom-select" aria-label="">
                                                                                         <option value="Greece" selected="">Greece</option>
                                                                                         <option value="Afghanistan">Afghanistan</option>
                                                                                         <option value="Aland Islands">Aland Islands</option>
@@ -415,13 +415,13 @@
                                                                                 <div class="col-lg-6">
                                                                                     <div class="mb-5">
                                                                                         <label class="form-label">Current Password:</label>
-                                                                                        <input type="password" class="form-control form-control-solid" name="current_password" id="password" required="" placeholder="Type Your Current Password" value="">
+                                                                                        <input type="password" class="form-control form-custom-input" name="current_password" id="password" required="" placeholder="Type Your Current Password" value="">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-lg-6">
                                                                                     <div class="mb-5">
                                                                                         <label class="form-label">New Password:</label>
-                                                                                        <input type="password" class="form-control form-control-solid" name="password_new" id="password_new" required="" placeholder="Type Your New Password" value="">
+                                                                                        <input type="password" class="form-control form-custom-input" name="password_new" id="password_new" required="" placeholder="Type Your New Password" value="">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -496,7 +496,7 @@
                                                                                 <form action="#" method="Post" id="frmapipass" name="frmapipass" class="d-flex flex-column justify-content-between align-content-start h-100">
                                                                                     <div>
                                                                                         <label class="form-label">Configure API password</label>
-                                                                                        <input value="" type="text" class="form-control form-control-solid" name="api_pass" id="api_pass" placeholder="Enter your API password">
+                                                                                        <input value="" type="text" class="form-control form-custom-input" name="api_pass" id="api_pass" placeholder="Enter your API password">
                                                                                         <p class="fs-14 color-neutral-grey mt-4">
                                                                                         Enhance the security of your API access by setting a unique API password. By default, the API uses the same login password, but you can ensure separate authentication for better protection.
                                                                                         </p>
@@ -515,7 +515,7 @@
                                                                                 <form action="#" method="Post" id="frmapiip" name="frmapiip" class="mb-3 d-flex flex-column justify-content-between align-content-start h-100">
                                                                                     <div>
                                                                                         <label class="form-label">Enable IP Whitelisting:</label>
-                                                                                        <input class="form-control form-control-solid" value="" type="text" name="api_ip" id="api_ip" placeholder="Enter whitelisted IP address for your API">
+                                                                                        <input class="form-control form-custom-input" value="" type="text" name="api_ip" id="api_ip" placeholder="Enter whitelisted IP address for your API">
                                                                                         <p class="fs-14 color-neutral-grey mt-4">
                                                                                         Take a proactive approach to protect your API from unauthorized access. Enable IP whitelisting in this section to restrict HTTP(s) API requests to trusted IP addresses only. 
                                                                                         </p>
@@ -546,7 +546,7 @@
                                                                         <form class="mt-4" action="#" method="Post" id="frmwebhook" name="frmwebhook">
                                                                             <div>
                                                                                 <label class="form-label">DLR Call Back URL</label>
-                                                                                <input class="form-control form-control-solid" value="" type="text" name="dlr" id="dlr" placeholder="http://www.example.com/dlr.php">
+                                                                                <input class="form-control form-custom-input" value="" type="text" name="dlr" id="dlr" placeholder="http://www.example.com/dlr.php">
                                                                                 <p class="fs-14 color-neutral-grey mt-4">
                                                                                 Enhance the security of your API access by setting a unique API password. By default, the API uses the same login password, but you can ensure separate authentication for better protection.
                                                                                 </p>
@@ -600,11 +600,11 @@
                                                                                                     </div>
                                                                                                     <div class="mb-5 mt-8">
                                                                                                         <label class="form-label">When balance falls below</label>
-                                                                                                        <input class="form-control form-control-solid" type="text" disabled="" value="" name="low_balance_amount" maxlength="7" id="low_balance_amount" required="" placeholder="Enter an amount" onkeypress="return goodchars(event,'0123456789');">
+                                                                                                        <input class="form-control form-custom-input" type="text" disabled="" value="" name="low_balance_amount" maxlength="7" id="low_balance_amount" required="" placeholder="Enter an amount" onkeypress="return goodchars(event,'0123456789');">
                                                                                                     </div>
                                                                                                     <div>
                                                                                                         <label class="form-label">Notification sent to:</label>
-                                                                                                        <input class="form-control form-control-solid" type="email" disabled="" value="" name="low_balance_email" id="low_balance_email" required="" placeholder="Email address to notify">
+                                                                                                        <input class="form-control form-custom-input" type="email" disabled="" value="" name="low_balance_email" id="low_balance_email" required="" placeholder="Email address to notify">
                                                                                                     </div>
                                                                                                     <div class="text-start mt-5">
                                                                                                         <button type="submit" id="btnsubmit_alert" name="btnsubmit_alert" value="Save" class="btn btn-grad py-2 px-8 rounded-1">
