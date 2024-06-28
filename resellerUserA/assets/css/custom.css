@@ -483,6 +483,39 @@ button.tablinks.active {
     background: gray;
 }
 
+.error-page-wrapper {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url(/assets/img/error-img.webp), -webkit-linear-gradient(#0E41C1, #0047FF) ;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.btn-white {
+    text-decoration: none;
+    padding: 8px 20px;
+    color: #000;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #FFF;
+}
+
+.btn-outline-white {
+    text-decoration: none;
+    padding: 8px 20px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid #FFF;
+}
+
 @media(max-width: 991px) {
     .app-sidebar {
         height: auto !important;

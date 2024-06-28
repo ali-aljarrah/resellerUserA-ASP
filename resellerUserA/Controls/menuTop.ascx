@@ -49,21 +49,9 @@
 				</div>
 			</div>
 			<!--begin::Navbar-->
-			<div class="app-navbar flex-shrink-0 gap-3 gap-lg-8 align-items-center">
-				<button type="button" class="btn btn-sm btn-icon" data-kt-menu-trigger="{default: 'click'}" data-kt-menu-placement="bottom-end">
-				    <svg width="28" height="34" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M20.7946 16.9944C20.2743 16.0981 19.5009 13.5622 19.5009 10.25C19.5009 8.26088 18.7107 6.35322 17.3042 4.9467C15.8976 3.54018 13.99 2.75 12.0009 2.75C10.0117 2.75 8.10409 3.54018 6.69757 4.9467C5.29104 6.35322 4.50087 8.26088 4.50087 10.25C4.50087 13.5631 3.72649 16.0981 3.20618 16.9944C3.07331 17.2222 3.00287 17.4811 3.00196 17.7449C3.00106 18.0086 3.06972 18.268 3.20102 18.4967C3.33233 18.7255 3.52163 18.9156 3.74984 19.0478C3.97805 19.1801 4.2371 19.2498 4.50087 19.25H8.3268C8.49984 20.0967 8.96001 20.8577 9.62949 21.4042C10.299 21.9507 11.1367 22.2492 12.0009 22.2492C12.8651 22.2492 13.7028 21.9507 14.3722 21.4042C15.0417 20.8577 15.5019 20.0967 15.6749 19.25H19.5009C19.7646 19.2496 20.0235 19.1798 20.2516 19.0475C20.4796 18.9151 20.6688 18.725 20.8 18.4963C20.9312 18.2676 20.9998 18.0083 20.9988 17.7446C20.9979 17.4809 20.9274 17.2222 20.7946 16.9944ZM12.0009 20.75C11.5357 20.7499 11.082 20.6055 10.7022 20.3369C10.3225 20.0683 10.0353 19.6886 9.88024 19.25H14.1215C13.9664 19.6886 13.6793 20.0683 13.2995 20.3369C12.9197 20.6055 12.466 20.7499 12.0009 20.75Z" fill="url(#paint0_linear_1134_383)"/>
-						<defs>
-						<linearGradient id="paint0_linear_1134_383" x1="12.0004" y1="2.75" x2="12.0004" y2="22.2492" gradientUnits="userSpaceOnUse">
-						<stop stop-color="#0E41C1" stop-opacity="0.870588"/>
-						<stop offset="1" stop-color="#0047FF" stop-opacity="0.870588"/>
-						</linearGradient>
-						</defs>
-					</svg>				
-				</button>
-			
+			<div class="app-navbar flex-shrink-0 gap-3 gap-lg-8 align-items-center">			
 				<!--begin::User menu-->
-				<div class="app-navbar-item" id="kt_header_user_menu_toggle">
+				<div class="app-navbar-item">
 					<!--begin::Menu wrapper-->
 					<div class="cursor-pointer symbol symbol-40px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
 						<svg width="28" height="34" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,16 +69,9 @@
 						<!--begin::Menu item-->
 						<div class="menu-item px-3">
 							<div class="menu-content d-flex align-items-center px-3">
-								<!--begin::Avatar-->
-								<div class="symbol symbol-50px me-5">
-									<img alt="Logo" src="assets/media/avatars/300-2.jpg" />
-								</div>
-								<!--end::Avatar-->
 								<!--begin::Username-->
 								<div class="d-flex flex-column">
-									<div class="fw-bold d-flex align-items-center fs-5">Ana Fox 
-									<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span></div>
-									<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">ana@kt.com</a>
+									<div class="fw-bold d-flex align-items-center fs-5">Jessica Davis</div>
 								</div>
 								<!--end::Username-->
 							</div>
@@ -101,136 +82,25 @@
 						<!--end::Menu separator-->
 						<!--begin::Menu item-->
 						<div class="menu-item px-5">
-							<a href="account/overview.html" class="menu-link px-5">My Profile</a>
-						</div>
-						<!--end::Menu item-->
-						<!--begin::Menu item-->
-						<div class="menu-item px-5">
-							<a href="apps/projects/list.html" class="menu-link px-5">
-								<span class="menu-text">My Projects</span>
-								<span class="menu-badge">
-									<span class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-								</span>
-							</a>
-						</div>
-						<!--end::Menu item-->
-						<!--begin::Menu item-->
-						<div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-							<a href="#" class="menu-link px-5">
-								<span class="menu-title">My Subscription</span>
-								<span class="menu-arrow"></span>
-							</a>
-							<!--begin::Menu sub-->
-							<div class="menu-sub menu-sub-dropdown w-175px py-4">
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<a href="account/referrals.html" class="menu-link px-5">Referrals</a>
-								</div>
-								<!--end::Menu item-->
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<a href="account/billing.html" class="menu-link px-5">Billing</a>
-								</div>
-								<!--end::Menu item-->
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<a href="account/statements.html" class="menu-link px-5">Payments</a>
-								</div>
-								<!--end::Menu item-->
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<a href="account/statements.html" class="menu-link d-flex flex-stack px-5">Statements 
-									<span class="ms-2 lh-0" data-bs-toggle="tooltip" title="View your statements">
-										<i class="ki-outline ki-information-5 fs-5"></i>
-									</span></a>
-								</div>
-								<!--end::Menu item-->
-								<!--begin::Menu separator-->
-								<div class="separator my-2"></div>
-								<!--end::Menu separator-->
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<div class="menu-content px-3">
-										<label class="form-check form-switch form-check-custom form-check-solid">
-											<input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications" />
-											<span class="form-check-label text-muted fs-7">Notifications</span>
-										</label>
-									</div>
-								</div>
-								<!--end::Menu item-->
-							</div>
-							<!--end::Menu sub-->
-						</div>
-						<!--end::Menu item-->
-						<!--begin::Menu item-->
-						<div class="menu-item px-5">
-							<a href="account/statements.html" class="menu-link px-5">My Statements</a>
+							<a href="/settings.aspx" class="menu-link px-5">My Profile</a>
 						</div>
 						<!--end::Menu item-->
 						<!--begin::Menu separator-->
 						<div class="separator my-2"></div>
 						<!--end::Menu separator-->
 						<!--begin::Menu item-->
-						<div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-							<a href="#" class="menu-link px-5">
-								<span class="menu-title position-relative">Language 
-								<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English 
-								<img class="w-15px h-15px rounded-1 ms-2" src="assets/media/flags/united-states.svg" alt="" /></span></span>
-							</a>
-							<!--begin::Menu sub-->
-							<div class="menu-sub menu-sub-dropdown w-175px py-4">
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<a href="account/settings.html" class="menu-link d-flex px-5 active">
-									<span class="symbol symbol-20px me-4">
-										<img class="rounded-1" src="assets/media/flags/united-states.svg" alt="" />
-									</span>English</a>
-								</div>
-								<!--end::Menu item-->
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<a href="account/settings.html" class="menu-link d-flex px-5">
-									<span class="symbol symbol-20px me-4">
-										<img class="rounded-1" src="assets/media/flags/spain.svg" alt="" />
-									</span>Spanish</a>
-								</div>
-								<!--end::Menu item-->
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<a href="account/settings.html" class="menu-link d-flex px-5">
-									<span class="symbol symbol-20px me-4">
-										<img class="rounded-1" src="assets/media/flags/germany.svg" alt="" />
-									</span>German</a>
-								</div>
-								<!--end::Menu item-->
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<a href="account/settings.html" class="menu-link d-flex px-5">
-									<span class="symbol symbol-20px me-4">
-										<img class="rounded-1" src="assets/media/flags/japan.svg" alt="" />
-									</span>Japanese</a>
-								</div>
-								<!--end::Menu item-->
-								<!--begin::Menu item-->
-								<div class="menu-item px-3">
-									<a href="account/settings.html" class="menu-link d-flex px-5">
-									<span class="symbol symbol-20px me-4">
-										<img class="rounded-1" src="assets/media/flags/france.svg" alt="" />
-									</span>French</a>
-								</div>
-								<!--end::Menu item-->
-							</div>
-							<!--end::Menu sub-->
+						<div class="menu-item px-5">
+							<a href="/help.aspx" class="menu-link px-5">Help</a>
 						</div>
 						<!--end::Menu item-->
 						<!--begin::Menu item-->
 						<div class="menu-item px-5 my-1">
-							<a href="account/settings.html" class="menu-link px-5">Account Settings</a>
+							<a href="#" class="menu-link px-5">Contact us</a>
 						</div>
 						<!--end::Menu item-->
 						<!--begin::Menu item-->
 						<div class="menu-item px-5">
-							<a href="authentication/layouts/corporate/sign-in.html" class="menu-link px-5">Sign Out</a>
+							<a href="#" class="menu-link px-5">Logout</a>
 						</div>
 						<!--end::Menu item-->
 					</div>
