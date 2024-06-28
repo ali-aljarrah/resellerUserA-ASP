@@ -20,7 +20,7 @@
 		</div>
 		<!--end::Logo-->
 		<div class="d-flex flex-lg-grow-1 flex-stack" id="kt_app_header_wrapper">
-			<div class="app-header-wrapper d-flex align-items-center justify-content-around justify-content-lg-between flex-wrap gap-6 gap-lg-0 mb-6 mb-lg-0" data-kt-swapper="true" data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}" data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_wrapper'}">
+			<div class="app-header-wrapper d-flex align-items-center justify-content-start justify-content-lg-between flex-wrap gap-6 gap-lg-0 mb-6 mb-lg-0" data-kt-swapper="true" data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}" data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_wrapper'}">
 				<!--begin::Page title-->
 				<div class="d-none d-md-block h-40px border-start border-gray-200 me-10"></div>
 				<div class="d-flex flex-column justify-content-center">
