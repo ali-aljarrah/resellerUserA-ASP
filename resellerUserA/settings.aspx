@@ -68,7 +68,7 @@
                                                         <div class="tab-pane fade show active" id="profile_tab" role="tabpanel">
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    <div class="card-body shadow-xs rounded-4">
+                                                                   <div class="card-body shadow-xs rounded-4">
                                                                     <!--begin::Page title-->
                                                                     <div class="page-title d-flex flex-column justify-content-center gap-1">
                                                                         <!--begin::Title-->
@@ -373,37 +373,12 @@
                                                                 </div>
                                                             </div>
                                                           </div>
-                                                            <div class="row mt-5">
-                                                                <div class="col-md-12 pt-5">    
-                                                                    <div class="card-body shadow-xs rounded-4">
-                                                                      <div class="page-title d-flex flex-column justify-content-center gap-1">
-                                                                            <!--begin::Title-->
-                                                                            <h4 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Profile Picture Upload Guidelines</h4>
-                                                                            <p class="fs-12 color-neutral-grey">
-                                                                                 Your picture is an important part of your profile to help personalize the dashboard. Once uploaded, your profile picture will be circular:                                                                            </p>
-                                                                            <ul>
-                                                                                <li>Format: JPG, GIF, or PNG</li>
-                                                                                <li>Maximum size: 2MB; Ideal size: at least 200 x 200 pixels</li>
-                                                                            </ul>
-                                                                            <!--end::Title-->
-                                                                             <!--begin::Title-->
-                                                                             <h4 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Logo Upload Guidelines</h4>
-                                                                            <p class="fs-12 color-neutral-grey">
-                                                                                Your brand or service logo must follow the requirements below to ensure it fits properly in the designated area.                                                                           </p>
-                                                                            <ul>
-                                                                                <li>Format: JPG, GIF, or PNG</li>
-                                                                                <li>Maximum size: 2MB; Ideal size: at least 200 x 200 pixels</li>
-                                                                            </ul>
-                                                                            <!--end::Title-->
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                         </div>
                                                         <div class="tab-pane fade" id="security_tab" role="tabpanel">
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div>
+                                                                       <div class="card-body shadow-xs rounded-4">
                                                                         <!--begin::Page title-->
                                                                         <div class="page-title d-flex flex-column justify-content-center gap-1">
                                                                             <!--begin::Title-->
@@ -442,6 +417,7 @@
                                                                         </form>
                                                                     </div>
                                                                     <div class="mt-18">
+                                                                        <div class="card-body shadow-xs rounded-4">
                                                                         <!--begin::Page title-->
                                                                         <div class="page-title d-flex flex-column justify-content-center gap-1">
                                                                             <!--begin::Title-->
@@ -477,14 +453,17 @@
                                                                                 </button>
                                                                             </div>
                                                                         </form>
-                                                                    </div>
+                                                                     </div>
+                                                                   </div>
                                                                 </div>
+                                                              </div>
                                                             </div>
                                                         </div>
                                                         <div class="tab-pane fade" id="api_tab" role="tabpanel">
                                                             <div class="row">
-                                                                <div class="col-md-8">
+                                                                <div class="col-md-12">
                                                                     <div>
+                                                                        <div class="card-body shadow-xs rounded-4">
                                                                         <!--begin::Page title-->
                                                                         <div class="page-title d-flex flex-column justify-content-center gap-1">
                                                                             <!--begin::Title-->
@@ -537,6 +516,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="mt-18">
+                                                                        <div class="card-body shadow-xs rounded-4">
                                                                         <!--begin::Page title-->
                                                                         <div class="page-title d-flex flex-column justify-content-center gap-1">
                                                                             <!--begin::Title-->
@@ -567,13 +547,16 @@
                                                                             </div>
 												                        </form>
                                                                     </div>
-                                                                </div>
-                                                            </div>
+                                                                    </div>
+                                                                 </div>
+                                                               </div>
+                                                           </div>
                                                         </div>
                                                         <div class="tab-pane fade" id="notifications_tab" role="tabpanel">
                                                             <div class="row">
-                                                                <div class="col-md-8">
+                                                                <div class="col-md-12">
                                                                     <div>
+                                                                       <div class="card-body shadow-xs rounded-4">
                                                                         <!--begin::Page title-->
                                                                         <div class="page-title d-flex flex-column justify-content-center gap-1">
                                                                             <!--begin::Title-->
@@ -628,8 +611,9 @@
                                                                             </div>
                                                                         </form>
                                                                     </div>
-                                                                </div>
-                                                            </div>
+                                                                    </div>
+                                                               </div>
+                                                           </div>
                                                         </div>
                                                     </div>
                                                 </div>
