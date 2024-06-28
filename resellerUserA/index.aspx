@@ -204,7 +204,7 @@
 												<!--begin::Col-->
 												<div class="col-xl-8 mb-5 mb-xl-10">
 													<!--begin::Table widget 9-->
-													<div class="card card-flush shadow-xs h-xl-100">
+													<div class="card card-flush shadow-xs h-xl-100 mt-1">
 														<!--begin::Header-->
 														<div class="card-header pt-5">
 															<!--begin::Title-->
@@ -214,8 +214,8 @@
 															<!--end::Title-->
 														</div>
 														<!--end::Header-->
-														<div class="row d-flex justify-content-center mb-5">
-															<div class="col-lg-4 d-flex justify-content-start shadow-xs rounded-2 p-3 me-4">
+														<div class="row d-flex justify-content-center m-5 p-5">
+															<div class="col-xl-4 mb-xs-10 d-flex justify-content-start shadow-xs rounded-2 p-3 mb-5 me-4">
 																	<!--begin::Block-->
 																<div class="d-flex flex-column px-3">
 																	<!--begin::Total-->
@@ -231,7 +231,7 @@
 																</div>
 																<!--end::Wrapper-->
 															</div>
-															<div class="col-lg-4 d-flex justify-content-start shadow-xs rounded-2 p-3 ms-4">
+															<div class="col-lg-4 d-flex justify-content-start shadow-xs rounded-2 p-3 mb-5 me-4">
 																	<!--begin::Block-->
 																<div class="d-flex flex-column px-3">
 																	<!--begin::Total-->
@@ -247,7 +247,6 @@
 																</div>
 																<!--end::Wrapper-->
 															</div>
-
 													    </div>
 														<div class="card-body">
 															<div id="kt_apexcharts_3" style="height: 200px;"></div>
