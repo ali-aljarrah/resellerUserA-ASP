@@ -6,6 +6,8 @@
 <%@ Register Src="~/Controls/sideBar.ascx" TagPrefix="uc1" TagName="sideBar" %>
 <%@ Register Src="~/Controls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
 <%@ Register Src="~/Controls/footerLinks.ascx" TagPrefix="uc1" TagName="footerLinks" %>
+<%@ Register Src="~/Controls/loader.ascx" TagPrefix="uc1" TagName="loader" %>
+
 
 <uc1:head runat="server" ID="head" />
 	<title>Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes</title>
@@ -13,6 +15,7 @@
 	<!--end::Head-->
 	<!--begin::Body-->
 	<body id="kt_app_body" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
+		<uc1:loader runat="server" id="loader" />
 		<!--begin::Theme mode setup on page load-->
 		<script>
 			var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }
@@ -156,7 +159,7 @@
 												<div class="col-lg-4 mb-xl-10">
 													<!--begin::Chart Widget 47-->
 													<!--begin::Chart Widget 48-->
-													<div class="card card-flush shadow-xs bg-blue">
+													<div class="card card-flush shadow-xs bg-blue mb-1">
 														<div class="d-flex align-items-start">
 															<!--begin::Wrapper-->
 															<div class="d-flex flex-stack flex-row-fluid p-4">
@@ -201,7 +204,7 @@
 												<!--begin::Col-->
 												<div class="col-xl-8 mb-5 mb-xl-10">
 													<!--begin::Table widget 9-->
-													<div class="card card-flush shadow-xs h-xl-100">
+													<div class="card card-flush shadow-xs h-xl-100 mt-1">
 														<!--begin::Header-->
 														<div class="card-header pt-5">
 															<!--begin::Title-->
@@ -211,8 +214,8 @@
 															<!--end::Title-->
 														</div>
 														<!--end::Header-->
-														<div class="row d-flex justify-content-center mb-5">
-															<div class="col-lg-4 d-flex justify-content-start shadow-xs rounded-2 p-3 me-4">
+														<div class="row d-flex justify-content-center m-5 p-5">
+															<div class="col-xl-4 mb-xs-10 d-flex justify-content-start shadow-xs rounded-2 p-3 mb-5 me-4">
 																	<!--begin::Block-->
 																<div class="d-flex flex-column px-3">
 																	<!--begin::Total-->
@@ -228,7 +231,7 @@
 																</div>
 																<!--end::Wrapper-->
 															</div>
-															<div class="col-lg-4 d-flex justify-content-start shadow-xs rounded-2 p-3 ms-4">
+															<div class="col-lg-4 d-flex justify-content-start shadow-xs rounded-2 p-3 mb-5 me-4">
 																	<!--begin::Block-->
 																<div class="d-flex flex-column px-3">
 																	<!--begin::Total-->
@@ -244,7 +247,6 @@
 																</div>
 																<!--end::Wrapper-->
 															</div>
-
 													    </div>
 														<div class="card-body">
 															<div id="kt_apexcharts_3" style="height: 200px;"></div>
@@ -381,59 +383,6 @@
 												<div class="d-flex justify-content-center pt-1 mt-1">
 													<canvas id="kt_chartjs_3" class="mh-300px mb-4"></canvas>
 												</div>
-												<!-- <div class="row justify-content-center p-3 mt-5 pb-5">
-															<div class="col-lg-4 d-flex justify-content-center pt-5">
-																<h6 class=" align-items-start flex-column">
-																	<span class=" fw-bold text-gray-800">
-																		<svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<ellipse cx="5.5" cy="4.5" rx="5" ry="4.5" fill="#DFDFDF"/>
-																			<defs>
-																			<linearGradient id="paint0_linear_943_46551" x1="5.5" y1="0" x2="5.5" y2="9" gradientUnits="userSpaceOnUse">
-																			<stop stop-color="#0E41C1" stop-opacity="0.870588"/>
-																			<stop offset="1" stop-color="#0047FF" stop-opacity="0.870588"/>
-																			</linearGradient>
-																			</defs>
-																		</svg>
-																		Undelivered
-																	</span>
-																	<span class="gray ps-5 pt-2">40%</span>
-																</h6>
-															</div>
-															<div class="col-lg-4 d-flex justify-content-center pt-5">
-																<h6 class=" align-items-start flex-column d-flex">
-																	<span class=" fw-bold text-gray-800">
-																	<svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<ellipse cx="5.5" cy="4.5" rx="5" ry="4.5" fill="#FFC700"/>
-																		<defs>
-																		<linearGradient id="paint0_linear_943_46551" x1="5.5" y1="0" x2="5.5" y2="9" gradientUnits="userSpaceOnUse">
-																		<stop stop-color="#0E41C1" stop-opacity="0.870588"/>
-																		<stop offset="1" stop-color="#0047FF" stop-opacity="0.870588"/>
-																		</linearGradient>
-																		</defs>
-																	</svg>
-																		Pending
-																	</span>
-																	<span class="gray ps-5">32%</span>
-																</h6>
-															</div>
-															<div class="col-lg-4 d-flex justify-content-center pt-5">
-																<h6 class="align-items-start flex-column">
-																	<span class=" fw-bold text-gray-800">
-																	    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<ellipse cx="5.5" cy="4.5" rx="5" ry="4.5" fill="url(#paint0_linear_943_46551)"/>
-																				<defs>
-																				<linearGradient id="paint0_linear_943_46551" x1="5.5" y1="0" x2="5.5" y2="9" gradientUnits="userSpaceOnUse">
-																				<stop stop-color="#0E41C1" stop-opacity="0.870588"/>
-																				<stop offset="1" stop-color="#0047FF" stop-opacity="0.870588"/>
-																				</linearGradient>
-																				</defs>
-																		</svg>
-																		Delivered
-																	</span>
-																	<span class="gray ps-5">28%</span>
-																</h6>
-															</div>
-												</div> -->
 											</div>
 											<!--end::Table Widget 9-->
 										</div>

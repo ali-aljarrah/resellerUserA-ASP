@@ -6,7 +6,7 @@
 <%@ Register Src="~/Controls/sideBar.ascx" TagPrefix="uc1" TagName="sideBar" %>
 <%@ Register Src="~/Controls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
 <%@ Register Src="~/Controls/footerLinks.ascx" TagPrefix="uc1" TagName="footerLinks" %>
-
+<%@ Register Src="~/Controls/loader.ascx" TagPrefix="uc1" TagName="loader" %>
 
 <uc1:head runat="server" ID="head" />
 
@@ -46,6 +46,7 @@
 <!--end::Head-->
 <!--begin::Body-->
 <body id="kt_app_body" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
+    <uc1:loader runat="server" id="loader" />
     <!--begin::Theme mode setup on page load-->
     <script>
         var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }
@@ -71,11 +72,12 @@
                         <div id="kt_app_content" class="app-content flex-column-fluid">
                             <!--begin::Content container-->
                             <div id="kt_app_content_container" class="app-container container-fluid">
-                                <!--begin::Row-->
+                                  <!--begin::Row-->
                                     <div class="row g-5 g-xl-10 mb-xl-10 mt-0">
                                         <!--begin::Col-->
                                         <div class="col-md-12 mb-md-0 mb-5 mt-5">
                                             <!--begin::Page title-->
+                                            <div class="card card-flush shadow-xs h-lg-100 p-5">
                                             <div class="page-title gap-1 d-flex justify-content-between align-items-start">
                                                 <div>
                                                    <!--begin::Title-->
@@ -91,7 +93,7 @@
                                             </div>
                                             <!--end::Page title-->
                                             <!--begin::Card widget 4-->
-                                            <div class="card card-flush border-0">
+                                           
                                                 <!--begin::Card body-->
                                                 <div class="card-body pb-4 mt-0 pt-5 ps-0 pr-0">
                                                     <div class="table-responsive">

@@ -18,171 +18,58 @@ $( document ).ready(function() {
         "hideMethod": "fadeOut"
     };
 
-    // if(document.getElementById("current-date")) {
-    //     document.getElementById("current-date").innerHTML = new Date().getFullYear();
-    // }
+    if(document.getElementById("current-date")) {
+        document.getElementById("current-date").innerHTML = new Date().getFullYear();
+    }
 
-    // $('.loader').fadeOut();
-    // setTimeout(() => {
-    //     $('.loader').removeClass('show');
-    // }, 1500);
+    $('.loader').fadeOut();
+        setTimeout(() => {
+        $('.loader').removeClass('show');
+    }, 1500);
 
-    // var url = window.location.pathname;
+    var url = window.location.pathname;
 
-    // if(url == '/') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#dashbaord-link').addClass('active');
-    // } else if (url == '/sendsms') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#sendsms-tab').addClass('hover');
-    //     $('#sendsms-tab').addClass('show');
-    //     $('#sendsms-content').addClass('show');
-    //     $('#sendsms-link').addClass('active');
-    // } else if (url == '/sendbulk') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#sendsms-tab').addClass('hover');
-    //     $('#sendsms-tab').addClass('show');
-    //     $('#sendsms-content').addClass('show');
-    //     $('#sendbulk-link').addClass('active');
-    // } else if (url == '/hlr') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#lookuo-tab').addClass('hover');
-    //     $('#lookuo-tab').addClass('show');
-    //     $('#lookuo-content').addClass('show');
-    //     $('#hlr-link').addClass('active');
-    // } else if (url == '/hlr_log') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#lookuo-tab').addClass('hover');
-    //     $('#lookuo-tab').addClass('show');
-    //     $('#lookuo-content').addClass('show');
-    //     $('#hlrlog-link').addClass('active');
-    // } else if (url == '/manage-temp') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#favorites-tab').addClass('hover');
-    //     $('#favorites-tab').addClass('show');
-    //     $('#favorites-content').addClass('show');
-    //     $('#managetemp-link').addClass('active');
-    // } else if (url == '/files-manager') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#favorites-tab').addClass('hover');
-    //     $('#favorites-tab').addClass('show');
-    //     $('#favorites-content').addClass('show');
-    //     $('#filesmanager-link').addClass('active');
-    // } else if (url == '/sentreport') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#reports-tab').addClass('hover');
-    //     $('#reports-tab').addClass('show');
-    //     $('#reports-content').addClass('show');
-    //     $('#sentreport-link').addClass('active');
-    // } else if (url == '/queuereport') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#reports-tab').addClass('hover');
-    //     $('#reports-tab').addClass('show');
-    //     $('#reports-content').addClass('show');
-    //     $('#queuereport-link').addClass('active');
-    // } else if (url == '/reloadreport') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#reports-tab').addClass('hover');
-    //     $('#reports-tab').addClass('show');
-    //     $('#reports-content').addClass('show');
-    //     $('#reloadreport-link').addClass('active');
-    // } else if (url == '/paymentsreport') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#reports-tab').addClass('hover');
-    //     $('#reports-tab').addClass('show');
-    //     $('#reports-content').addClass('show');
-    //     $('#paymentsreport-link').addClass('active');
-    // } else if (url == '/standard-quality') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#billing-tab').addClass('hover');
-    //     $('#billing-tab').addClass('show');
-    //     $('#billing-content').addClass('show');
-    //     $('#standard-link').addClass('active');
-    // } else if (url == '/high-quality') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#billing-tab').addClass('hover');
-    //     $('#billing-tab').addClass('show');
-    //     $('#billing-content').addClass('show');
-    //     $('#high-link').addClass('active');
-    // } else if (url == '/lookup_reload') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#billing-tab').addClass('hover');
-    //     $('#billing-tab').addClass('show');
-    //     $('#billing-content').addClass('show');
-    //     $('#lookupreload-link').addClass('active');
-    // } else if (url == '/coverage') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#coverage-link').addClass('active');
-    // } else if (url == '/help') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#help-link').addClass('active');
-    //     $('#kt_app_sidebar_menu_wrapper').scrollDivToElement('#help-link');
-    // } else if (url == '/settings') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#settings-link').addClass('active');
-    // } else if (url == '/api') {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    //     $('#api-link').addClass('active');
-    // } else {
-    //     $('.menu-link').removeClass('active');
-    //     $('.menu-item').removeClass('hover');
-    //     $('.menu-item').removeClass('show');
-    //     $('.menu-sub').removeClass('show');
-    // }
+    if (url == '/index.aspx') {
+        document.getElementById("home-lg-link").classList.add("active");
+    } else if (url == '/send_sms.aspx') {
+        document.getElementById("sms-lg-btn").classList.add("active");
+        document.getElementById("send-single-sms-lg-link").classList.add("active");
+    } else if (url == '/bulksms.aspx') {
+        document.getElementById("sms-lg-btn").classList.add("active");
+        document.getElementById("send-bulk-sms-lg-link").classList.add("active");
+    } else if (url == '/hlr.aspx') {
+        document.getElementById("hlr-lg-btn").classList.add("active");
+        document.getElementById("hlr-lookup-lg-link").classList.add("active");
+    } else if (url == '/hlr_log.aspx') {
+        document.getElementById("hlr-lg-btn").classList.add("active");
+        document.getElementById("hlr-log-lg-link").classList.add("active");
+    } else if (url == '/sms_temp.aspx') {
+        document.getElementById("managment-lg-btn").classList.add("active");
+        document.getElementById("template-managment-lg-link").classList.add("active");
+    } else if (url == '/groups_manager.aspx') {
+        document.getElementById("managment-lg-btn").classList.add("active");
+        document.getElementById("group-manager-lg-link").classList.add("active");
+    } else if (url == '/sentreport.aspx') {
+        document.getElementById("report-lg-btn").classList.add("active");
+        document.getElementById("sent-report-lg-link").classList.add("active");
+    } else if (url == '/queuereport.aspx') {
+        document.getElementById("report-lg-btn").classList.add("active");
+        document.getElementById("queue-report-lg-link").classList.add("active");
+    } else if (url == '/reloadreport.aspx') {
+        document.getElementById("report-lg-btn").classList.add("active");
+        document.getElementById("reload-report-lg-link").classList.add("active");
+    } else if (url == '/paymentsreport.aspx') {
+        document.getElementById("report-lg-btn").classList.add("active");
+        document.getElementById("payment-report-lg-link").classList.add("active");
+    } else if (url == '/reload.aspx') {
+        document.getElementById("reload-lg-link").classList.add("active");
+    } else if (url == '/api_references.aspx') {
+        document.getElementById("api-lg-link").classList.add("active");
+    } else if (url == '/cov.aspx') {
+        document.getElementById("coverage-lg-link").classList.add("active");
+    } else if (url == '/settings.aspx') {
+        document.getElementById("settings-lg-link").classList.add("active");
+    }
 
 });
 

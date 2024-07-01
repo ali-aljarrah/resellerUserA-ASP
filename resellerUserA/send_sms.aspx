@@ -6,7 +6,7 @@
 <%@ Register Src="~/Controls/sideBar.ascx" TagPrefix="uc1" TagName="sideBar" %>
 <%@ Register Src="~/Controls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
 <%@ Register Src="~/Controls/footerLinks.ascx" TagPrefix="uc1" TagName="footerLinks" %>
-
+<%@ Register Src="~/Controls/loader.ascx" TagPrefix="uc1" TagName="loader" %>
 
 
 <uc1:head runat="server" ID="head" />
@@ -17,6 +17,7 @@
 <!--begin::Body-->
 <body id="kt_app_body" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
      <form action="#" id="frmSendSingleSms" name="frmSendSingleSms" novalidate="novalidate" runat="server">
+        <uc1:loader runat="server" id="loader" />
         <!--begin::Theme mode setup on page load-->
         <script>
             var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }
@@ -62,72 +63,70 @@
                                                 <!--end::Header-->
                                                 <!--begin::Body-->
                                                 <div class="card-body">
-                                               
-                                                        <div>
-                                                            <div class="mb-8">
-                                                                <label for="txtSender" class="form-label fs-14 color-black-1 required">Sender name</label>
-                                                                <input runat="server" type="text" class="form-control form-custom-input" name="txtSender" id="txtSender" placeholder="Sender name" data-bs-toggle="tooltip" data-bs-placement="top" title="Please Enter Sender For Message,Max length for numeric:18 and alphanumeric:11"/>
-                                                            </div>
-                                                            <div class="mb-8">
-                                                                <label for="cmbMessageType" class="form-label fs-14 color-black-1 required">SMS type</label>
-                                                                <select runat="server" class="form-select form-custom-select" onchange="javascript:setMessageLength();" id="cmbMessageType" name="cmbMessageType" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Please Select Message Type">
-                                                                    <option value="">Please select one</option>
-                                                                    <option value="0">Text</option>
-                                                                    <option value="2">Arabic</option>
-                                                                    <option value="9">Unicode</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="mb-8">
-                                                                <label for="txtNumber" class="form-label fs-14 color-black-1 required">Mobile number</label>
-                                                                <input runat="server" type="text" class="form-control form-custom-input" onkeypress="return goodchars(event,'0123456789,+');" name="txtNumber" id="txtNumber" placeholder="Use number with country code" data-bs-toggle="tooltip" data-bs-placement="top" title="Please Enter Mobile Number,Maximum 30 numbers can be added seperated by comma.."/>
-                                                            </div>
-                                                            <div class="mb-8">
-                                                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                                                    <label for="txtMessage" class="form-label fs-14 color-black-1 required">Message</label>
-                                                                    <div class="d-flex justify-content-end align-items-center">
-                                                                        <a id="chooseTemplateBtn" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Choose template">
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                                                <path d="M19.5 4.5V7.5H4.5V4.5H19.5ZM19.5 3H4.5C4.10218 3 3.72064 3.15804 3.43934 3.43934C3.15804 3.72064 3 4.10218 3 4.5V7.5C3 7.89782 3.15804 8.27936 3.43934 8.56066C3.72064 8.84196 4.10218 9 4.5 9H19.5C19.8978 9 20.2794 8.84196 20.5607 8.56066C20.842 8.27936 21 7.89782 21 7.5V4.5C21 4.10218 20.842 3.72064 20.5607 3.43934C20.2794 3.15804 19.8978 3 19.5 3ZM7.5 12V19.5H4.5V12H7.5ZM7.5 10.5H4.5C4.10218 10.5 3.72064 10.658 3.43934 10.9393C3.15804 11.2206 3 11.6022 3 12V19.5C3 19.8978 3.15804 20.2794 3.43934 20.5607C3.72064 20.842 4.10218 21 4.5 21H7.5C7.89782 21 8.27936 20.842 8.56066 20.5607C8.84196 20.2794 9 19.8978 9 19.5V12C9 11.6022 8.84196 11.2206 8.56066 10.9393C8.27936 10.658 7.89782 10.5 7.5 10.5ZM19.5 12V19.5H12V12H19.5ZM19.5 10.5H12C11.6022 10.5 11.2206 10.658 10.9393 10.9393C10.658 11.2206 10.5 11.6022 10.5 12V19.5C10.5 19.8978 10.658 20.2794 10.9393 20.5607C11.2206 20.842 11.6022 21 12 21H19.5C19.8978 21 20.2794 20.842 20.5607 20.5607C20.842 20.2794 21 19.8978 21 19.5V12C21 11.6022 20.842 11.2206 20.5607 10.9393C20.2794 10.658 19.8978 10.5 19.5 10.5Z" fill="#121212"/>
-                                                                            </svg>
-                                                                        </a>
-                                                                    </div>
+                                                    <div>
+                                                        <div class="mb-8">
+                                                            <label for="txtSender" class="form-label fs-14 color-black-1 required">Sender name</label>
+                                                            <input runat="server" type="text" class="form-control form-custom-input" name="txtSender" id="txtSender" placeholder="Sender name" data-bs-toggle="tooltip" data-bs-placement="top" title="Please Enter Sender For Message,Max length for numeric:18 and alphanumeric:11"/>
+                                                        </div>
+                                                        <div class="mb-8">
+                                                            <label for="cmbMessageType" class="form-label fs-14 color-black-1 required">SMS type</label>
+                                                            <select runat="server" class="form-select form-custom-select" onchange="javascript:setMessageLength();" id="cmbMessageType" name="cmbMessageType" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Please Select Message Type">
+                                                                <option value="">Please select one</option>
+                                                                <option value="0">Text</option>
+                                                                <option value="2">Arabic</option>
+                                                                <option value="9">Unicode</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-8">
+                                                            <label for="txtNumber" class="form-label fs-14 color-black-1 required">Mobile number</label>
+                                                            <input runat="server" type="text" class="form-control form-custom-input" onkeypress="return goodchars(event,'0123456789,+');" name="txtNumber" id="txtNumber" placeholder="Use number with country code" data-bs-toggle="tooltip" data-bs-placement="top" title="Please Enter Mobile Number,Maximum 30 numbers can be added seperated by comma.."/>
+                                                        </div>
+                                                        <div class="mb-8">
+                                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                                <label for="txtMessage" class="form-label fs-14 color-black-1 required">Message</label>
+                                                                <div class="d-flex justify-content-end align-items-center">
+                                                                    <a id="chooseTemplateBtn" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Choose template">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                            <path d="M19.5 4.5V7.5H4.5V4.5H19.5ZM19.5 3H4.5C4.10218 3 3.72064 3.15804 3.43934 3.43934C3.15804 3.72064 3 4.10218 3 4.5V7.5C3 7.89782 3.15804 8.27936 3.43934 8.56066C3.72064 8.84196 4.10218 9 4.5 9H19.5C19.8978 9 20.2794 8.84196 20.5607 8.56066C20.842 8.27936 21 7.89782 21 7.5V4.5C21 4.10218 20.842 3.72064 20.5607 3.43934C20.2794 3.15804 19.8978 3 19.5 3ZM7.5 12V19.5H4.5V12H7.5ZM7.5 10.5H4.5C4.10218 10.5 3.72064 10.658 3.43934 10.9393C3.15804 11.2206 3 11.6022 3 12V19.5C3 19.8978 3.15804 20.2794 3.43934 20.5607C3.72064 20.842 4.10218 21 4.5 21H7.5C7.89782 21 8.27936 20.842 8.56066 20.5607C8.84196 20.2794 9 19.8978 9 19.5V12C9 11.6022 8.84196 11.2206 8.56066 10.9393C8.27936 10.658 7.89782 10.5 7.5 10.5ZM19.5 12V19.5H12V12H19.5ZM19.5 10.5H12C11.6022 10.5 11.2206 10.658 10.9393 10.9393C10.658 11.2206 10.5 11.6022 10.5 12V19.5C10.5 19.8978 10.658 20.2794 10.9393 20.5607C11.2206 20.842 11.6022 21 12 21H19.5C19.8978 21 20.2794 20.842 20.5607 20.5607C20.842 20.2794 21 19.8978 21 19.5V12C21 11.6022 20.842 11.2206 20.5607 10.9393C20.2794 10.658 19.8978 10.5 19.5 10.5Z" fill="#121212"/>
+                                                                        </svg>
+                                                                    </a>
                                                                 </div>
-                                                                <input runat="server" type="hidden" name="codePoints" value="" onblur="document.frmSendSingleSms.txtMessage.value = convertCP2Char( document.frmSendSingleSms.codePoints.value );&#10;document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );&#10;return false;" readonly="readonly"/>                                                    
-                                                                <input runat="server" type="hidden" name="UTF16" value="" onblur="document.frmSendSingleSms.codePoints.value = convertUTF162CP( document.frmSendSingleSms.UTF16.value );&#10;return false;" rows="3" cols="50" />  
-                                                                <textarea runat="server" name="txtMessage" rows="4" id="txtMessage" placeholder="Write message here..." class="form-control form-custom-textarea" size="30" maxlength="335" onkeypress="javascript:setCounter()" onblur="javascript:setCounter(); document.frmSendSingleSms.codePoints.value = convertChar2CP(document.frmSendSingleSms.txtMessage.value);
-                                                                document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );
-                                                                return false;" onclick="javascript:setCounter();document.frmSendSingleSms.codePoints.value = convertChar2CP(document.frmSendSingleSms.txtMessage.value);
-                                                                document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );
-                                                                return false;" onkeyup="javascript:setCounter(); document.frmSendSingleSms.codePoints.value = convertChar2CP(document.frmSendSingleSms.txtMessage.value);
-                                                                document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );
-                                                                return false;" dir="ltr"></textarea>
+                                                            </div>
+                                                            <input runat="server" type="hidden" name="codePoints" id="codePoints" value="" onblur="document.frmSendSingleSms.txtMessage.value = convertCP2Char( document.frmSendSingleSms.codePoints.value );&#10;document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );&#10;return false;" readonly="readonly"/>                                                    
+                                                            <input runat="server" type="hidden" name="UTF16" value="" onblur="document.frmSendSingleSms.codePoints.value = convertUTF162CP( document.frmSendSingleSms.UTF16.value );&#10;return false;" rows="3" cols="50" />  
+                                                            <textarea runat="server" name="txtMessage" rows="4" id="txtMessage" placeholder="Write message here..." class="form-control form-custom-textarea" size="30" maxlength="335" onkeypress="javascript:setCounter()" onblur="javascript:setCounter(); document.frmSendSingleSms.codePoints.value = convertChar2CP(document.frmSendSingleSms.txtMessage.value);
+                                                            document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );
+                                                            return false;" onclick="javascript:setCounter();document.frmSendSingleSms.codePoints.value = convertChar2CP(document.frmSendSingleSms.txtMessage.value);
+                                                            document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );
+                                                            return false;" onkeyup="javascript:setCounter(); document.frmSendSingleSms.codePoints.value = convertChar2CP(document.frmSendSingleSms.txtMessage.value);
+                                                            document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );
+                                                            return false;" dir="ltr"></textarea>
                                                         
-                                                                <div class="fs-12 text-gradients-blue">
-                                                                    <input runat="server" type="text" name="txtcount" value="0 : 1 SMS Parts" readonly="readonly" class="fs-12 text-gradients-blue text-start border-0">
-                                                                    <input runat="server" type="hidden" name="hiddcount" value="160" id="hiddcount">
-                                                                    <input runat="server" type="hidden" name="txtMessageCount" value="1">
-                                                                </div>
-                                                            </div>
-                                                            <div class="d-flex justify-content-start align-items-start">
-                                                                <button runat="server" type="submit" class="btn btn-grad-1 py-4 px-9 rounded-3" id="btnSubmit" name="btnSubmit">
-                                                                    <span class="indicator-label">Send SMS</span>
-                                                                    <span class="indicator-progress">
-                                                                        <span class="spinner-border text-white" role="status">
-                                                                            <span class="visually-hidden">Loading...</span>
-                                                                        </span>
-                                                                    </span>
-                                                                </button>
-                                                                <button runat="server" type="button" class="btn btn-outline-dark btn-bordered py-4 px-8 rounded-2 ms-8" id="btnSaveTemplate" name="btnSaveTemplate">
-                                                                    <span class="indicator-label">Save as template</span>
-                                                                    <span class="indicator-progress">
-                                                                        <span class="spinner-border text-white" role="status">
-                                                                            <span class="visually-hidden">Loading...</span>
-                                                                        </span>
-                                                                    </span>
-                                                                </button>
+                                                            <div class="fs-12 text-gradients-blue">
+                                                                <input runat="server" type="text" name="txtcount" id="txtcount" value="0 : 1 SMS Parts" readonly="readonly" class="fs-12 text-gradients-blue text-start border-0">
+                                                                <input runat="server" type="hidden" name="hiddcount" value="160" id="hiddcount">
+                                                                <input runat="server" type="hidden" name="txtMessageCount" id="txtMessageCount" value="1">
                                                             </div>
                                                         </div>
-                                              
+                                                        <div class="d-flex justify-content-start align-items-start">
+                                                            <button runat="server" type="submit" class="btn btn-grad-1 py-4 px-9 rounded-3" id="btnSubmit" name="btnSubmit">
+                                                                <span class="indicator-label">Send SMS</span>
+                                                                <span class="indicator-progress">
+                                                                    <span class="spinner-border text-white" role="status">
+                                                                        <span class="visually-hidden">Loading...</span>
+                                                                    </span>
+                                                                </span>
+                                                            </button>
+                                                            <button runat="server" type="button" class="btn btn-outline-dark btn-bordered py-4 px-8 rounded-2 ms-8" id="btnSaveTemplate" name="btnSaveTemplate">
+                                                                <span class="indicator-label">Save as template</span>
+                                                                <span class="indicator-progress">
+                                                                    <span class="spinner-border text-white" role="status">
+                                                                        <span class="visually-hidden">Loading...</span>
+                                                                    </span>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <!--end: Card Body-->
                                             </div>

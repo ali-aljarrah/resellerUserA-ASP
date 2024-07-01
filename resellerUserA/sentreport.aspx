@@ -6,7 +6,7 @@
 <%@ Register Src="~/Controls/sideBar.ascx" TagPrefix="uc1" TagName="sideBar" %>
 <%@ Register Src="~/Controls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
 <%@ Register Src="~/Controls/footerLinks.ascx" TagPrefix="uc1" TagName="footerLinks" %>
-
+<%@ Register Src="~/Controls/loader.ascx" TagPrefix="uc1" TagName="loader" %>
 
 <uc1:head runat="server" ID="head" />
 
@@ -15,6 +15,7 @@
 <!--end::Head-->
 <!--begin::Body-->
 <body id="kt_app_body" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
+    <uc1:loader runat="server" id="loader" />
     <!--begin::Theme mode setup on page load-->
     <script>
         var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }
@@ -40,7 +41,7 @@
                         <div id="kt_app_content" class="app-content flex-column-fluid">
                             <!--begin::Content container-->
                             <div id="kt_app_content_container" class="app-container container-fluid">
-                                <!--begin::Row-->
+                                    <!--begin::Row-->
                                     <div class="row g-5 g-xl-10 mb-xl-10 mt-0">
                                         <!--begin::Col-->
                                         <div class="col-md-12 mb-md-0 mb-5 mt-5">
@@ -50,23 +51,23 @@
                                                       For security reasons, older records will be deleted automatically after 30 days.
                                                 </div>
                                                 <div class="mt-5">
-                                                    <form action="#" method="post">
+                                                    <form action="#" method="post" id="hlrForm" name="hlrForm" runat="server">
 														<div class="row">
                                                             <div class="col-md-4 mb-8 mb-md-0">
                                                                 <div class="mb-8">
                                                                     <label for="date_from" class="form-label fs-14 dark-color">Start date</label>
-                                                                    <input type="date" class="form-control form-control-solid" name="date_from" id="date_from" placeholder="Start date" required="">
+                                                                    <input type="date" class="form-control form-custom-input" name="date_from" id="date_from" runat="server" placeholder="Start date" required="">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-4 mb-8 mb-md-0">
                                                                 <div class="mb-8">
                                                                     <label for="date_to" class="form-label fs-14 dark-color">End date</label>
-                                                                    <input type="date" class="form-control form-control-solid" name="date_to" id="date_to" placeholder="Finish date" required="" max="2023-09-20">
+                                                                    <input type="date" class="form-control form-custom-input" name="date_to" id="date_to" runat="server" placeholder="Finish date" required="" max="2023-09-20">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-4 mb-8 mb-md-0">
                                                                 <div class="d-flex justify-content-start align-items-center h-100">
-                                                                <button type="submit" id="export" name="export" value="Export" class="btn btn-primary btn-grad py-4 px-6 rounded-1" fdprocessedid="3fvavj">
+                                                                <button type="submit" id="export" name="export" runat="server" value="Export" class="btn btn-primary btn-grad py-4 px-6 rounded-1" fdprocessedid="3fvavj">
                                                                         <span class="fs-12">Export</span>
                                                                         <span class="indicator-progress">
                                                                             <span class="spinner-border text-white" role="status">
@@ -89,6 +90,7 @@
                                             <div class="separator mb-7 mt-4"></div>
                                             <!--end::Menu separator-->
                                             <!--begin::Page title-->
+                                            <div class="card card-flush shadow-xs p-5">
                                             <div class="page-title gap-1 d-flex justify-content-between align-items-start">
                                                 <div>
                                                    <!--begin::Title-->
@@ -117,7 +119,7 @@
                                                 </div> -->
                                             <!--end::Page title-->
                                             <!--begin::Card widget 4-->
-                                            <div class="card card-flush border-0">
+                                         
                                                 <!--begin::Card body-->
                                                 <div class="card-body pb-4 mt-0 pt-5 ps-0 pr-0">
                                                     <div class="table-responsive">
@@ -183,7 +185,7 @@
                                         </div>
                                         <!--end::Col-->
                                         <!--begin::Col-->
-										<div class="col-md-6 mb-md-0 mt-md-0 mb-5 mt-5">
+										<div class="col-md-12 mb-md-0 mt-md-0 mb-5 mt-5">
 											<div class="custom-border-left h-100 mt-10 mt-md-0">
 												<div class="p-8">
                                                     <div>
@@ -197,30 +199,30 @@
                                                              Please note that the export time may vary depending on the size of the data.
                                                         </p>
                                                     </div>
-                                                    <div class="row mt-6">
-                                                        <div class="col-4">
-                                                        <a href="#">
-                                                            <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
-                                                                <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
-                                                                <span>021-2023-01-29-2023-01-30.zip</span>
-                                                            </div>
-                                                        </a>
+                                                    <div class="d-flex flex-wrap align-items-center mt-6">
+                                                        <div class="me-5">
+                                                            <a href="#">
+                                                                <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
+                                                                    <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
+                                                                    <span>021-2023-01-29-2023-01-30.zip</span>
+                                                                </div>
+                                                            </a>
                                                         </div>
-                                                        <div class="col-4">
-                                                        <a href="#">
-                                                            <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
-                                                                <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
-                                                                <span>021-2023-01-29-2023-01-30.zip</span>
-                                                            </div>
-                                                        </a>
+                                                        <div class="me-5">
+                                                            <a href="#">
+                                                                <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
+                                                                    <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
+                                                                    <span>021-2023-01-29-2023-01-30.zip</span>
+                                                                </div>
+                                                            </a>
                                                         </div>
-                                                        <div class="col-4">
-                                                        <a href="#">
-                                                            <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
-                                                                <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
-                                                                <span>021-2023-01-29-2023-01-30.zip</span>
-                                                            </div>
-                                                        </a>
+                                                        <div class="me-5">
+                                                            <a href="#">
+                                                                <div class="fs-12 cyan-color fw-bold cyan-bg rounded-2 p-2 cyan-border mb-4 w-fit">
+                                                                    <i class="bi bi-file-earmark-bar-graph cyan-color me-1"></i>
+                                                                    <span>021-2023-01-29-2023-01-30.zip</span>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </div>
 												</div>

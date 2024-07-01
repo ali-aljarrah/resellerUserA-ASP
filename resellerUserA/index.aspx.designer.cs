@@ -24,6 +24,15 @@ namespace resellerUserA
         protected global::resellerUserA.Controls.head head;
 
         /// <summary>
+        /// loader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::resellerUserA.Controls.loader loader;
+
+        /// <summary>
         /// menuTop1 control.
         /// </summary>
         /// <remarks>
