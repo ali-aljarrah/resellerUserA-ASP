@@ -13,5 +13,36 @@ namespace resellerUserA
         {
 
         }
+
+        protected void payPalBtn_Click(object sender, EventArgs e)
+        {
+            validateInputs();
+        }
+
+        protected void cryptoBtn_Click(object sender, EventArgs e)
+        {
+            validateInputs();
+        }
+
+        public void validateInputs ()
+        {
+            string script;
+            string ReloadOption = Request.Form["ReloadOption"];
+
+            if (ReloadOption == null)
+            {
+                script = "toastr.error(\"Please select options to reload!\");";
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", script, true);
+                return;
+            }
+
+            string[] parts = ReloadOption.Split('|');
+
+            string price = parts[0];
+            string plan = parts[1];
+
+            script = "onSubmitSuccess();";
+            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", script, true);
+        }
     }
 }

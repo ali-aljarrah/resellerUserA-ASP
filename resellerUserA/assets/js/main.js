@@ -29,7 +29,7 @@ $( document ).ready(function() {
 
     var url = window.location.pathname;
 
-    if (url == '/index.aspx') {
+    if (url == '/') {
         document.getElementById("home-lg-link").classList.add("active");
     } else if (url == '/send_sms.aspx') {
         document.getElementById("sms-lg-btn").classList.add("active");

@@ -79,7 +79,7 @@
 												        </div>
                                                         <div class="mb-8">
                                                             <label for="selectedFiles" class="form-label fs-14 color-black-1">Selected files</label>
-                                                            <textarea runat="server" name="selectedFiles" rows="4" id="selectedFiles" placeholder="Selected file's names." class="form-control form-custom-textarea" size="30" maxlength="765" data-bs-toggle="tooltip" data-bs-placement="top" title="This block will show the selected files" disabled></textarea>
+                                                            <textarea runat="server" name="selectedFiles" rows="4" id="selectedFiles" placeholder="Selected file's names." class="form-control form-custom-textarea" size="30" maxlength="765" data-bs-toggle="tooltip" data-bs-placement="top" title="This block will show the selected files" readonly></textarea>
                                                             <div class="fs-12 text-gradients-blue">
                                                                 <span id="files-count">0</span> files : <span id="number-count">0</span> numbers
                                                             </div>
@@ -126,13 +126,12 @@
                                                             </div>
 														    <input runat="server" type="hidden" name="codePoints" id="codePoints" value="" onblur="document.frmsendbulk.txtMessage.value = convertCP2Char( document.frmsendbulk.codePoints.value );&#10;document.frmsendbulk.UTF16.value = convertCP2UTF16( document.frmsendbulk.codePoints.value );&#10;return false;" readonly="readonly"/>                                                    
 														    <input runat="server" type="hidden" name="UTF16" id="UTF16" value="" onblur="document.frmsendbulk.codePoints.value = convertUTF162CP( document.frmsendbulk.UTF16.value );&#10;return false;" rows="3" cols="50" />  
-														    <textarea runat="server" name="txtMessage" rows="4" id="txtMessage" placeholder="Write message here..." class="form-control form-custom-textarea" size="30" maxlength="766" onkeypress="javascript:setCounter()" onblur="javascript:setCounter(); document.frmsendbulk.codePoints.value = convertChar2CP(document.frmsendbulk.txtMessage.value);
-														    document.frmsendbulk.UTF16.value = convertCP2UTF16( document.frmsendbulk.codePoints.value );
-														    return false;" onclick="javascript:setCounter();document.frmsendbulk.codePoints.value = convertChar2CP(document.frmsendbulk.txtMessage.value);
-														    document.frmsendbulk.UTF16.value = convertCP2UTF16( document.frmsendbulk.codePoints.value );
-														    return false;" onkeyup="javascript:setCounter(); document.frmsendbulk.codePoints.value = convertChar2CP(document.frmsendbulk.txtMessage.value);
-														    document.frmsendbulk.UTF16.value = convertCP2UTF16( document.frmsendbulk.codePoints.value );
-														    return false;" spellcheck="false"></textarea>
+														   <textarea runat="server" name="txtMessage" rows="4" id="txtMessage" placeholder="Write message here..." 
+                                                             class="form-control form-custom-textarea" size="30" maxlength="335" 
+                                                             onkeypress="javascript:setCounter()" 
+                                                             onblur="javascript:setCounter();" onclick="javascript:setCounter();" 
+                                                             onkeyup="javascript:setCounter();" dir="ltr"></textarea>
+
 														    <div class="fs-12 text-gradients-blue">
 															    <input runat="server" type="text" id="txtcount" name="txtcount" value="0 : 1 SMS Parts" readonly="readonly" class="fs-12 text-gradients-blue text-start border-0">
 															    <input runat="server" type="hidden" name="hiddcount" value="160" id="hiddcount">
@@ -140,18 +139,15 @@
 														    </div>
 													    </div>
 													    <div class="d-flex justify-content-start align-items-center">
-														    <button runat="server" type="submit" class="btn btn-grad-1 py-4 px-9 rounded-3" id="btnSubmit" name="btnSubmit">
-															    <span class="indicator-label">Send Bulk</span>
-															    <span class="indicator-progress">
-																    <span class="spinner-border text-white" role="status">
-																	    <span class="visually-hidden">Loading...</span>
-																    </span>
-															    </span>
-														    </button>
+                                                              <asp:Button ID="BulkBtnSubmit" runat="server" Text="Send Bulk" 
+                                                                  CssClass="btn btn-grad-1 py-4 px-9 rounded-3"
+                                                                  OnClientClick="sendBulkSubmit('BulkBtnSubmit'); return false;" OnClick="BulkBtnSubmit_Click" />
+
 														    <div>
 															    <a class="btn btn-outline-dark btn-bordered py-4 px-8 rounded-2 ms-8" href="/sentreport">View report</a>
 														    </div>
 													    </div>
+                                                        <asp:ScriptManager ID="ScriptManager1" runat="server" />
                                                     </div>
                                                 </div>
                                                 <!--end: Card Body-->
@@ -236,7 +232,7 @@
                                                                     <ul class="list-unstyled ps-10 pt-4">
                                                                         <li class="mb-5">
                                                                             <div class="form-check form-check-custom form-check-solid form-check-sm">
-                                                                                <input runat="server" class="form-check-input" type="checkbox" value="|03|Easy Send SMS HLR Statistics.txt" id="file1" name="fileListCheckbox"/>
+                                                                                <input runat="server" class="form-check-input file-checkbox" type="checkbox" value="|03|Easy Send SMS HLR Statistics.txt" id="file1" name="file1"/>
                                                                                 <label class="form-check-label fs-14 color-black-1" for="file1">
                                                                                     <span class="fs-12 color-green fw-500 bg-green rounded px-3 py-1">03</span>
                                                                                     Easy Send SMS HLR Statistics.txt
@@ -245,7 +241,7 @@
                                                                         </li>
                                                                         <li class="mb-5">
                                                                             <div class="form-check form-check-custom form-check-solid form-check-sm">
-                                                                                <input runat="server" class="form-check-input" type="checkbox" value="|489|exptest.txt" id="file2" name="fileListCheckbox"/>
+                                                                                <input runat="server" class="form-check-input file-checkbox" type="checkbox" value="|489|exptest.txt" id="file2" name="file2"/>
                                                                                 <label class="form-check-label fs-14 color-black-1" for="file2">
                                                                                     <span class="fs-12 color-green fw-500 bg-green rounded px-3 py-1">489</span>
                                                                                     exptest.txt
@@ -254,7 +250,7 @@
                                                                         </li>
                                                                         <li class="mb-5">
                                                                             <div class="form-check form-check-custom form-check-solid form-check-sm">
-                                                                                <input runat="server" class="form-check-input" type="checkbox" value="|88|exptest.txt" id="file3" name="fileListCheckbox"/>
+                                                                                <input runat="server" class="form-check-input file-checkbox" type="checkbox" value="|88|exptest.txt" id="file3" name="file3"/>
                                                                                 <label class="form-check-label fs-14 color-black-1" for="file3">
                                                                                     <span class="fs-12 color-green fw-500 bg-green rounded px-3 py-1">88</span>
                                                                                     exptest.txt
@@ -263,7 +259,7 @@
                                                                         </li>
                                                                         <li class="mb-5">
                                                                             <div class="form-check form-check-custom form-check-solid form-check-sm">
-                                                                                <input runat="server" class="form-check-input" type="checkbox" value="|78|exptest.txt" id="file4" name="fileListCheckbox"/>
+                                                                                <input runat="server" class="form-check-input file-checkbox" type="checkbox" value="|78|exptest.txt" id="file4" name="file4"/>
                                                                                 <label class="form-check-label fs-14 color-black-1" for="file4">
                                                                                     <span class="fs-12 color-green fw-500 bg-green rounded px-3 py-1">88</span>
                                                                                     exptest.txt
@@ -272,7 +268,7 @@
                                                                         </li>
                                                                         <li class="mb-5">
                                                                             <div class="form-check form-check-custom form-check-solid form-check-sm">
-                                                                                <input runat="server" class="form-check-input" type="checkbox" value="|78|exptest.txt" id="file5" name="fileListCheckbox"/>
+                                                                                <input runat="server" class="form-check-input file-checkbox" type="checkbox" value="|78|exptest.txt" id="file5" name="file5"/>
                                                                                 <label class="form-check-label fs-14 color-black-1" for="file5">
                                                                                     <span class="fs-12 color-green fw-500 bg-green rounded px-3 py-1">88</span>
                                                                                     exptest.txt
@@ -281,7 +277,7 @@
                                                                         </li>
                                                                         <li class="mb-5">
                                                                             <div class="form-check form-check-custom form-check-solid form-check-sm">
-                                                                                <input runat="server" class="form-check-input" type="checkbox" value="|78|exptest.txt" id="file6" name="fileListCheckbox"/>
+                                                                                <input runat="server" class="form-check-input file-checkbox" type="checkbox" value="|78|exptest.txt" id="file6" name="file6"/>
                                                                                 <label class="form-check-label fs-14 color-black-1" for="file6">
                                                                                     <span class="fs-12 color-green fw-500 bg-green rounded px-3 py-1">88</span>
                                                                                     exptest.txt
@@ -290,7 +286,7 @@
                                                                         </li>
                                                                         <li class="mb-5">
                                                                             <div class="form-check form-check-custom form-check-solid form-check-sm">
-                                                                                <input runat="server" class="form-check-input" type="checkbox" value="|78|exptest.txt" id="file7" name="fileListCheckbox"/>
+                                                                                <input runat="server" class="form-check-input file-checkbox" type="checkbox" value="|78|exptest.txt" id="file7" name="file7"/>
                                                                                 <label class="form-check-label fs-14 color-black-1" for="file7">
                                                                                     <span class="fs-12 color-green fw-500 bg-green rounded px-3 py-1">88</span>
                                                                                     exptest.txt
@@ -299,7 +295,7 @@
                                                                         </li>
                                                                         <li class="mb-5">
                                                                             <div class="form-check form-check-custom form-check-solid form-check-sm">
-                                                                                <input runat="server" class="form-check-input" type="checkbox" value="|78|exptest.txt" id="file8" name="fileListCheckbox"/>
+                                                                                <input runat="server" class="form-check-input file-checkbox" type="checkbox" value="|78|exptest.txt" id="file8" name="file8"/>
                                                                                 <label class="form-check-label fs-14 color-black-1" for="file8">
                                                                                     <span class="fs-12 color-green fw-500 bg-green rounded px-3 py-1">88</span>
                                                                                     exptest.txt

@@ -168,7 +168,7 @@ span.menu-link, span.menu-link.menu-center:hover svg path {
 }
 
 .fs-16 {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 .fs-18 {
@@ -395,18 +395,17 @@ button.btn.btn-secondary.buttons-pdf.buttons-html5 {
 }
 
 .form-check-image.active:not(.form-check-success):not(.form-check-danger) .form-check-wrapper {
-    border-color: #f1f1f1 !important;
     background: -webkit-linear-gradient(#0E41C1, #0047FF) !important;
 }
 
 .form-check-image:not(.form-check-success):not(.form-check-danger) .form-check-wrapper {
     border-color: gray !important;
-    background: #f8f5ff  !important;
+    background: #f8f5ff!important;
 }
 
 .form-check-image.active:not(.form-check-success):not(.form-check-danger) .form-check-wrapper .form-check-input:checked {
     background-color: #37d52f;
-    border-color:   #ffffff;
+    border-color: #ffffff;
 }
 
 .form-check-input:checked[type=radio] {
