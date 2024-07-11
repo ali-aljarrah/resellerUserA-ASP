@@ -123,8 +123,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <hr class="my-5" />
-                                                <div class="row mt-10">
+                                                <hr class="my-10" />
+                                                <div class="row mt-0">
                                                     <div class="col-lg-6 mb-5 mb-lg-0">
                                                         <div>
                                                             <div class="tab">
@@ -490,8 +490,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <hr class="my-5" />
-                                            <div class="row mt-5">
+                                            <hr class="my-10" />
+                                            <div class="row mt-0">
                                                 <div class="col-md-12">
                                                     <div class="card card-flush bg-soft-gray shadow-xs h-lg-100">
                                                         <div class="pro-plan mw-100 p-5 m-0">

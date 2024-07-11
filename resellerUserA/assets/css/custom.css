@@ -400,7 +400,7 @@ button.btn.btn-secondary.buttons-pdf.buttons-html5 {
 
 .form-check-image:not(.form-check-success):not(.form-check-danger) .form-check-wrapper {
     border-color: gray !important;
-    background: #f8f5ff!important;
+    background: #f8f5ff !important;
 }
 
 .form-check-image.active:not(.form-check-success):not(.form-check-danger) .form-check-wrapper .form-check-input:checked {
@@ -412,15 +412,19 @@ button.btn.btn-secondary.buttons-pdf.buttons-html5 {
     background-color: #50CD89;
     border-color: #ffffff !important;
 }
+
 .form-check-image.active p.dark-color.fs-25.fw-bold.mb-0 {
     color: #fff !important;
 }
+
 .form-check-image.active p.dark-color.fs-14.mb-0 {
     color: #fff !important;
 }
+
 input.form-check-input {
     background: lightgrey;
 }
+
 button.tablinks.active {
     background: -webkit-linear-gradient(#0E41C1, #0047FF) !important;
     color: #FFF !important;
@@ -462,7 +466,6 @@ button.tablinks.active {
 .tabcontent {
     float: left;
     padding: 0px 12px;
-
     width: 100%;
     border-left: none;
     height: 300px;
@@ -485,7 +488,7 @@ button.tablinks.active {
 .error-page-wrapper {
     min-width: 100vw;
     min-height: 100vh;
-    background-image: url(/assets/img/error-img.webp), -webkit-linear-gradient(#0E41C1, #0047FF) ;
+    background-image: url(/assets/img/error-img.webp), -webkit-linear-gradient(#0E41C1, #0047FF);
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: contain;
@@ -521,6 +524,20 @@ button.tablinks.active {
     }
 }
 
+.custom-tab {
+    color: #7E7E7E !important;
+    font-size: 18px;
+    border: none !important;
+    padding: 10px 25px !important;
+    border-radius: 35px !important;
+    transition: all .3s ease-in-out !important;
+}
+
+    .custom-tab.active, .custom-tab:hover {
+        background: -webkit-linear-gradient(#0E41C1, #0047FF) !important;
+        color: #FFF !important;
+        border: none !important;
+    }
 
 .form-switch .form-check-input {
     --bs-form-switch-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e);
@@ -532,5 +549,3 @@ button.tablinks.active {
     transition: background-position .15s ease-in-out;
     background-repeat: no-repeat;
 }
-
-

@@ -83,7 +83,7 @@
                                             <div class="separator mb-7 mt-4"></div>
                                             <!--end::Menu separator-->
                                             <!--begin::Page title-->
-                                            <div class="card card-flush shadow-xs p-5">
+                                            <div class="card card-flush shadow-xs p-8">
                                             <div class="page-title gap-1 d-flex justify-content-between align-items-start">
                                                 <div>
                                                     <!--begin::Title-->
