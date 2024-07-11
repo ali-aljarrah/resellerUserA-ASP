@@ -42,30 +42,30 @@
                         <!--begin::Content-->
                         <div id="kt_app_content" class="app-content flex-column-fluid">
                             <!--begin::Content container-->
-                            <div id="kt_app_content_container" class="app-container container-fluid cutom-tabs">
+                            <div id="kt_app_content_container" class="app-container container-fluid">
                                 <!--begin::Row-->
-                                <div class="row g-5 g-xl-10">
+                                <div class="row g-5 g-xl-10 mt-0">
                                     <!--begin::Col-->
-                                    <div class="col-xl-12 mb-xl-10">
+                                    <div class="col-xl-12 mb-xl-10 mt-0">
                                         <div class="mb-10">
-                                            <ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x mb-5 fs-6">
+                                            <ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x mb-5 fs-6 border-0">
                                                 <li class="nav-item">
-                                                    <a class="nav-link fs-18 active" data-bs-toggle="tab" href="#sms_api_tab">SMS API (3.0)</a>
+                                                    <a class="nav-link custom-tab active" data-bs-toggle="tab" href="#sms_api_tab">SMS API (3.0)</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link fs-18" data-bs-toggle="tab" href="#smpp_tab">SMPP (3.4)</a>
+                                                    <a class="nav-link custom-tab" data-bs-toggle="tab" href="#smpp_tab">SMPP (3.4)</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link fs-18" data-bs-toggle="tab" href="#credits_tab">Account Credits</a>
+                                                    <a class="nav-link custom-tab" data-bs-toggle="tab" href="#credits_tab">Account Credits</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link fs-18" data-bs-toggle="tab" href="#http_tab">HTTP Callback</a>
+                                                    <a class="nav-link custom-tab" data-bs-toggle="tab" href="#http_tab">HTTP Callback</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link fs-18" data-bs-toggle="tab" href="#hlr_tab">HLR Lookup</a>
+                                                    <a class="nav-link custom-tab" data-bs-toggle="tab" href="#hlr_tab">HLR Lookup</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link fs-18" data-bs-toggle="tab" href="#samples_tab">Code Samples</a>
+                                                    <a class="nav-link custom-tab" data-bs-toggle="tab" href="#samples_tab">Code Samples</a>
                                                 </li>
                                             </ul>
                                         </div>
