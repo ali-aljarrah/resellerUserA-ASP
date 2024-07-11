@@ -15,13 +15,13 @@ namespace resellerUserA
     {
 
         /// <summary>
-        /// kt_password_reset_form control.
+        /// password_reset_form control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm kt_password_reset_form;
+        protected global::System.Web.UI.HtmlControls.HtmlForm password_reset_form;
 
         /// <summary>
         /// fotoken control.
@@ -42,12 +42,21 @@ namespace resellerUserA
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl email;
 
         /// <summary>
-        /// kt_password_reset_submit control.
+        /// password_reset_submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton kt_password_reset_submit;
+        protected global::System.Web.UI.WebControls.Button password_reset_submit;
+
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
     }
 }

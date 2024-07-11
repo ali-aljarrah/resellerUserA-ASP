@@ -1,44 +1,20 @@
 const emailToValidate = 'a@a.com';
 const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
-// Update password 
-$('#btnsubmit_password').on('click', function (e) {
-    e.preventDefault();
-    $(this).prop('disabled', true);
-    let current_password = $('input[name=current_password]').val();
-    let password_new = $('input[name=password_new]').val();
-
-    if (current_password.trim() == '') {
-        toastr.error("Current Password Required: Please Provide Your Current Password");
-        $(this).prop('disabled', false);
-        return;
-    }
-    if (password_new.trim() == '') {
-        toastr.error("New Password Required: Please Provide Your New Password");
-        $(this).prop('disabled', false);
-        return;
-    }
-
-    toastr.success("Password updated Successfully!");
-
-    $(this).prop('disabled', false);
-
-});
-
 // Update personal details
-$('#btnsubmit_personal').on('click', function (e) {
-    e.preventDefault();
-    $(this).prop('disabled', true);
+function profileInfoSubmit(id) {
+    var el = document.getElementById(id);
+    el.disabled = true;
 
-    let name = $('input[name=name]').val();
-    let phone = $('input[name=phone]').val();
-    let company = $('input[name=company]').val();
-    let country = $('select[name=country]').val();
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var company = document.getElementById("company").value;
+    var country = document.getElementById("country").value;
 
     if (name.trim() == '') {
         toastr.error("Name Required: Please Provide Your Name");
-        $(this).prop('disabled', false);
-        return;
+        el.disabled = false;
+        return false;
     }
 
     let phoneNumber = phone;
@@ -47,60 +23,88 @@ $('#btnsubmit_personal').on('click', function (e) {
 
     if (phone.trim() == '' || res == false) {
         toastr.error("Phone Number Required: Please Provide Your Phone Number");
-        $(this).prop('disabled', false);
-        return;
+        el.disabled = false;
+        return false;
     }
+
 
     if (company.trim() == '') {
         toastr.error("Company Name Required: Please Provide Your Company Name");
-        $(this).prop('disabled', false);
-        return;
+        el.disabled = false;
+        return false;
     }
 
-    if (country.trim() == '' || country.trim() == 'Unknown') {
+      if (country.trim() == '' || country.trim() == 'Unknown') {
         toastr.error("Country Required: Please Provide Your Country");
-        $(this).prop('disabled', false);
-        return;
+          el.disabled = false;
+          return false;
     }
 
-    toastr.success("Profile details updated Successfully!");
+    el.disabled = false;
 
-    $(this).prop('disabled', false);
+    __doPostBack(id, '');
+}
 
-});
+// Update password 
+function updatePasswordSubmit(id) {
+    var el = document.getElementById(id);
+    el.disabled = true;
+
+    var current_password = document.getElementById("current_password").value; 
+    var password_new = document.getElementById("password_new").value; 
+
+    if (current_password.trim() == '') {
+        toastr.error("Current Password Required: Please Provide Your Current Password");
+        el.disabled = false;
+        return false;
+    }
+
+    if (password_new.trim() == '') {
+        toastr.error("New Password Required: Please Provide Your New Password");
+        el.disabled = false;
+        return false;
+    }
+
+    el.disabled = false;
+
+    __doPostBack(id, '');
+}
 
 // Update API password
-$('#btnsubmit_api_pass').click(function(e) {
-    e.preventDefault();
-    $(this).prop('disabled', true);
-    let api_password = $('#api_pass').val();
-    if (api_password.trim() == '') {
+function updateAPIPasswordSubmit(id) {
+    var el = document.getElementById(id);
+    el.disabled = true;
+
+    var api_pass = document.getElementById("api_pass").value;
+
+    if (api_pass.trim() == '') {
         toastr.error("Please enter your API password");
-        $(this).prop('disabled', false);
-        return;
+        el.disabled = false;
+        return false;
     }
 
-    toastr.success("API password updated Successfully!");
+    el.disabled = false;
 
-    $(this).prop('disabled', false);
-});
+    __doPostBack(id, '');
+}
 
 // Update IP whitelisting
-$('#btnsubmit_api_ip').click(function(e) {
-    e.preventDefault();
-    $(this).prop('disabled', true);
-    let api_ip = $('#api_ip').val();
+function updateAPIIPubmit(id) {
+    var el = document.getElementById(id);
+    el.disabled = true;
+
+    var api_ip = document.getElementById("api_ip").value;
 
     if (api_ip.trim() == '') {
         toastr.error("Please enter your IP");
-        $(this).prop('disabled', false);
-        return;
+        el.disabled = false;
+        return false;
     }
 
-    toastr.success("IP whitelist updated Successfully!");
+    el.disabled = false;
 
-    $(this).prop('disabled', false);
-})
+    __doPostBack(id, '');
+}
 
 // Toggle balance settings checkbox
 $('#low_balance_checkbox').on('change', function () {
@@ -113,53 +117,64 @@ $('#low_balance_checkbox').on('change', function () {
     }
 });
 
+function enableNotificationInputs() {
+    $('input[name=low_balance_amount]').prop("disabled", false);
+    $('input[name=low_balance_email]').prop("disabled", false);
+}
+
 // Update Balance settings
-$('#btnsubmit_alert').on('click', function (e) {
-    e.preventDefault();
-    $(this).prop('disabled', true);
-    if (!$('#low_balance_checkbox').is(':checked')) {
-        toastr.success("Balance notifications disabled Successfully");
-        $(this).prop('disabled', false);
-        return;
+function updateNotification(id) {
+    var el = document.getElementById(id);
+    el.disabled = true;
+
+    var low_balance_checkbox = document.getElementById("low_balance_checkbox");
+
+    console.log(low_balance_checkbox.checked)
+    if (low_balance_checkbox.checked == false) {
+        __doPostBack(id, '');
+        el.disabled = false;
+        return false;
     } else {
-        let low_balance_amount = $('input[name=low_balance_amount]').val();
-        let low_balance_email = $('input[name=low_balance_email]').val();
+        var low_balance_amount = document.getElementById("low_balance_amount").value;
+        var low_balance_email = document.getElementById("low_balance_email").value;
 
         if (low_balance_amount.trim() == '') {
             toastr.error("Balance Alert Amount Required: Please Provide Your Desired Amount");
-            $(this).prop('disabled', false);
-            return;
+            el.disabled = false;
+            return false;
         }
 
         if (low_balance_email.trim() == '') {
             toastr.error("Alert Email Required: Please Provide Your Email Address");
-            $(this).prop('disabled', false);
-            return;
+            el.disabled = false;
+            return false;
         }
 
         if (!emailRegexp.test(low_balance_email)) {
             toastr.error("Invalid Alert Email: Please Enter a Valid Email Address");
-            $(this).prop('disabled', false);
-            return;
+            el.disabled = false;
+            return false;
         }
-        toastr.success("Balance notifications enabled Successfully");
-        $(this).prop('disabled', false);
-        return;
 
+        el.disabled = false;
+        __doPostBack(id, '');
     }
-});
+}
 
 // Update webhook settings
-$('#btnsubmit_dlr').on('click', function (e) {
-    e.preventDefault();
-    $(this).prop('disabled', true);
-    let dlr = $('input[name=dlr]').val();
+function dlrSubmit(id) {
+    var el = document.getElementById(id);
+    el.disabled = true;
+
+    var dlr = document.getElementById("dlr").value;
+
     if (dlr.trim() == '') {
         toastr.error("Please enter DLR URL");
-        $(this).prop('disabled', false);
-        return;
+        el.disabled = false;
+        return false;
     }
-    toastr.success("DLR URL updated Successfully!");
 
-    $(this).prop('disabled', false);
-});
+    el.disabled = false;
+
+    __doPostBack(id, '');
+}

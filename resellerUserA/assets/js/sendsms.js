@@ -290,7 +290,7 @@ $('#btnSaveTemplate').click(function(e) {
 
 function saveTemplateSubmit(id) {
 
-    var el = document.getElementById("SaveTemplateSubmitBtn");
+    var el = document.getElementById(id);
     el.disabled = true;
 
     var templateName = document.getElementById("templateName").value;

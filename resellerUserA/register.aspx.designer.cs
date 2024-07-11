@@ -15,13 +15,49 @@ namespace resellerUserA
     {
 
         /// <summary>
-        /// kt_sign_up_form control.
+        /// sign_up_form control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm kt_sign_up_form;
+        protected global::System.Web.UI.HtmlControls.HtmlForm sign_up_form;
+
+        /// <summary>
+        /// roken control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden roken;
+
+        /// <summary>
+        /// fpuser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden fpuser;
+
+        /// <summary>
+        /// fpuser_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden fpuser_id;
+
+        /// <summary>
+        /// fpuser_ip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden fpuser_ip;
 
         /// <summary>
         /// email control.
@@ -51,12 +87,21 @@ namespace resellerUserA
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox toc;
 
         /// <summary>
-        /// kt_sign_up_submit control.
+        /// sign_up_submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton kt_sign_up_submit;
+        protected global::System.Web.UI.WebControls.Button sign_up_submit;
+
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
     }
 }

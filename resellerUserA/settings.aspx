@@ -15,33 +15,34 @@
 <!--end::Head-->
 <!--begin::Body-->
 <body id="kt_app_body" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
-    <uc1:loader runat="server" id="loader" />
-    <!--begin::Theme mode setup on page load-->
-    <script>
-        var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }
-    </script>
-    <!--end::Theme mode setup on page load-->
-    <!--begin::App-->
-    <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
-        <!--begin::Page-->
-        <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
-            <!--begin::Header-->
-             <uc1:menuTop runat="server" id="menuTop1" parentPageText="Settings" childPageText="Profile"/>
-            <!--end::Header-->
-            <!--begin::Wrapper-->
-            <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
-                <!--begin::Sidebar-->
-                <uc1:sideBar runat="server" id="sideBar" />
-                <!--end::Sidebar-->
-                <!--begin::Main-->
-                <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
-                    <!--begin::Content wrapper-->
-                    <div class="d-flex flex-column flex-column-fluid">
-                        <!--begin::Content-->
-                        <div id="kt_app_content" class="app-content flex-column-fluid">
-                            <!--begin::Content container-->
-                            <div id="kt_app_content_container" class="app-container container-fluid">
-                                <!--begin::Row-->
+    <form class="mt-4" action="#" method="Post" name="frmpd" id="frmpd" runat="server">
+        <uc1:loader runat="server" ID="loader" />
+        <!--begin::Theme mode setup on page load-->
+        <script>
+            var defaultThemeMode = "light"; var themeMode; if (document.documentElement) { if (document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if (localStorage.getItem("data-bs-theme") !== null) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }
+        </script>
+        <!--end::Theme mode setup on page load-->
+        <!--begin::App-->
+        <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+            <!--begin::Page-->
+            <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+                <!--begin::Header-->
+                <uc1:menuTop runat="server" ID="menuTop1" parentPageText="Settings" childPageText="Profile" />
+                <!--end::Header-->
+                <!--begin::Wrapper-->
+                <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
+                    <!--begin::Sidebar-->
+                    <uc1:sideBar runat="server" ID="sideBar" />
+                    <!--end::Sidebar-->
+                    <!--begin::Main-->
+                    <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+                        <!--begin::Content wrapper-->
+                        <div class="d-flex flex-column flex-column-fluid">
+                            <!--begin::Content-->
+                            <div id="kt_app_content" class="app-content flex-column-fluid">
+                                <!--begin::Content container-->
+                                <div id="kt_app_content_container" class="app-container container-fluid">
+                                    <!--begin::Row-->
                                     <div class="row g-5 g-xl-10 mb-xl-10 mt-0">
                                         <!--begin::Col-->
                                         <div class="col-md-12 mb-md-0 mb-5 mt-5">
@@ -67,35 +68,34 @@
                                                         <div class="tab-pane fade show active" id="profile_tab" role="tabpanel">
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                   <div class="card-body shadow-xs rounded-4">
-                                                                    <!--begin::Page title-->
-                                                                    <div class="page-title d-flex flex-column justify-content-center gap-1">
-                                                                        <!--begin::Title-->
-                                                                        <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Profile Details</h1>
-                                                                        <p class="fs-14 color-neutral-grey">
-                                                                             You can change your name, update your contact information, and other details to make your account feel more personalized.
-                                                                        </p>
-                                                                        <!--end::Title-->
-                                                                    </div>
-                                                                    <!--end::Page title-->
-                                                                    <form class="mt-4" action="settings" method="Post" name="frmpd" id="frmpd">
+                                                                    <div class="card-body shadow-xs rounded-4">
+                                                                        <!--begin::Page title-->
+                                                                        <div class="page-title d-flex flex-column justify-content-center gap-1">
+                                                                            <!--begin::Title-->
+                                                                            <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Profile Details</h1>
+                                                                            <p class="fs-14 color-neutral-grey">
+                                                                                You can change your name, update your contact information, and other details to make your account feel more personalized.
+                                                                            </p>
+                                                                            <!--end::Title-->
+                                                                        </div>
+                                                                        <!--end::Page title-->
                                                                         <div class="row">
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Name:</label>
-                                                                                    <input class="form-custom-input form-control" value="" type="text" name="name" id="name" required="" placeholder="Enter full name">
+                                                                                    <input class="form-custom-input form-control" value="" type="text" name="name" id="name" runat="server" placeholder="Enter full name">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Phone Number:</label>
-                                                                                    <input class="form-custom-input form-control" value="" type="text" name="phone" id="phone" maxlength="21" required="" placeholder="Enter your phone number">
+                                                                                    <input class="form-custom-input form-control" value="" type="text" name="phone" id="phone" runat="server" onkeypress="return goodchars(event,'0123456789,+');" maxlength="21" placeholder="Enter your phone number">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Company Name:</label>
-                                                                                    <input class="form-custom-input form-control" value="" type="text" name="company" id="company" required="" placeholder="Enter company name">
+                                                                                    <input class="form-custom-input form-control" value="" type="text" name="company" id="company" runat="server" placeholder="Enter company name">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-lg-6">
@@ -107,7 +107,7 @@
                                                                             <div class="col-lg-6">
                                                                                 <div class="mb-5">
                                                                                     <label class="form-label">Country:</label>
-                                                                                    <select name="country" id="country" class="form-select form-custom-select" aria-label="">
+                                                                                    <select name="country" id="country" runat="server" class="form-select form-custom-select" aria-label="">
                                                                                         <option value="Greece" selected="">Greece</option>
                                                                                         <option value="Afghanistan">Afghanistan</option>
                                                                                         <option value="Aland Islands">Aland Islands</option>
@@ -358,103 +358,87 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="text-start">
-                                                                            <button type="submit" id="btnsubmit_personal" name="btnsubmit_personal" value="Save" class="btn btn-grad py-2 px-8 rounded-1">
-                                                                                <span class="indicator-label">Edit profile</span>
-                                                                                <span class="indicator-progress">
-                                                                                    <span class="spinner-border text-white" role="status">
-                                                                                        <span class="visually-hidden">Loading...</span>
-                                                                                    </span>
-                                                                                </span>
-                                                                            </button>
+                                                                            <asp:Button ID="btnsubmit_personal" runat="server" Text="Edit profile"
+                                                                                CssClass="btn btn-grad py-2 px-8 rounded-1"
+                                                                                OnClientClick="profileInfoSubmit('btnsubmit_personal'); return false;" OnClick="btnsubmit_personal_Click" />
                                                                         </div>
-                                                                    </form>
+
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                          </div>
                                                         </div>
                                                         <div class="tab-pane fade" id="security_tab" role="tabpanel">
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div>
-                                                                       <div class="card-body shadow-xs rounded-4">
-                                                                        <!--begin::Page title-->
-                                                                        <div class="page-title d-flex flex-column justify-content-center gap-1">
-                                                                            <!--begin::Title-->
-                                                                            <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Change Password</h1>
-                                                                            <p class="fs-14 color-neutral-grey">
-                                                                            Your new password must be at least 8 characters long. This ensures a baseline level of security and makes it harder for unauthorized individuals to guess.
-                                                                            </p>
-                                                                            <!--end::Title-->
-                                                                        </div>
-                                                                        <!--end::Page title-->
-                                                                        <form class="mt-4" action="#" method="Post" name="frmss" id="frmss">
-                                                                            <div class="row">
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="mb-5">
-                                                                                        <label class="form-label">Current Password:</label>
-                                                                                        <input type="password" class="form-control form-custom-input" name="current_password" id="password" required="" placeholder="Type Your Current Password" value="">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="mb-5">
-                                                                                        <label class="form-label">New Password:</label>
-                                                                                        <input type="password" class="form-control form-custom-input" name="password_new" id="password_new" required="" placeholder="Type Your New Password" value="">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="text-start">
-                                                                                <button type="submit" id="btnsubmit_password" name="btnsubmit_password" value="Save" class="btn btn-grad py-2 px-8 rounded-1">
-                                                                                    <span class="indicator-label">Save changes</span>
-                                                                                    <span class="indicator-progress">
-                                                                                        <span class="spinner-border text-white" role="status">
-                                                                                            <span class="visually-hidden">Loading...</span>
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </button>
-                                                                            </div>
-                                                                        </form>
-                                                                    </div>
-                                                                    <div class="mt-18">
                                                                         <div class="card-body shadow-xs rounded-4">
-                                                                        <!--begin::Page title-->
-                                                                        <div class="page-title d-flex flex-column justify-content-center gap-1">
-                                                                            <!--begin::Title-->
-                                                                            <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Two Factor Authentication</h1>
-                                                                            <p class="fs-14 color-neutral-grey">
-                                                                            Ensure maximum protection for your account by enabling two-factor authentication for login.
-                                                                            </p>
-                                                                            <!--end::Title-->
+                                                                            <!--begin::Page title-->
+                                                                            <div class="page-title d-flex flex-column justify-content-center gap-1">
+                                                                                <!--begin::Title-->
+                                                                                <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Change Password</h1>
+                                                                                <p class="fs-14 color-neutral-grey">
+                                                                                    Your new password must be at least 8 characters long. This ensures a baseline level of security and makes it harder for unauthorized individuals to guess.
+                                                                                </p>
+                                                                                <!--end::Title-->
+                                                                            </div>
+                                                                            <!--end::Page title-->
+                                                                            <div class="mt-4">
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-6">
+                                                                                        <div class="mb-5">
+                                                                                            <label class="form-label">Current Password:</label>
+                                                                                            <input type="password" class="form-control form-custom-input" name="current_password" id="current_password" runat="server" placeholder="Type Your Current Password" value="">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-lg-6">
+                                                                                        <div class="mb-5">
+                                                                                            <label class="form-label">New Password:</label>
+                                                                                            <input type="password" class="form-control form-custom-input" name="password_new" id="password_new" runat="server" placeholder="Type Your New Password" value="">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="text-start">
+                                                                                    <asp:Button ID="btnsubmit_password" runat="server" Text="Update password"
+                                                                                        CssClass="btn btn-grad py-2 px-8 rounded-1"
+                                                                                        OnClientClick="updatePasswordSubmit('btnsubmit_password'); return false;" OnClick="btnsubmit_password_Click" />
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <!--end::Page title-->
-                                                                        <form class="mt-4" action="#" method="Post" name="frm2fa" id="frm2fa">
-                                                                            <div class="d-flex justify-content-start align-items-start mb-5 two-fa-card">
-                                                                                <div class="form-check form-switch me-4">
-                                                                                    <input class="form-check-input" type="checkbox" role="switch" id="2facheckbox" name="2facheckbox">
+                                                                        <div class="mt-18">
+                                                                            <div class="card-body shadow-xs rounded-4">
+                                                                                <!--begin::Page title-->
+                                                                                <div class="page-title d-flex flex-column justify-content-center gap-1">
+                                                                                    <!--begin::Title-->
+                                                                                    <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Two Factor Authentication</h1>
+                                                                                    <p class="fs-14 color-neutral-grey">
+                                                                                        Ensure maximum protection for your account by enabling two-factor authentication for login.
+                                                                                    </p>
+                                                                                    <!--end::Title-->
                                                                                 </div>
-                                                                                <div>
-                                                                                    <p class="fs-14 dark-color fw-600 mb-2">
-                                                                                    Activate 2FA
-                                                                                    </p>
-                                                                                    <p class="fs-14 color-neutral-grey mb-0">
-                                                                                    Enable two-factor authentication (2FA) to receive a verification OTP code via your registered email every time you log in.
-                                                                                    </p>
+                                                                                <!--end::Page title-->
+                                                                                <div class="mt-4">
+                                                                                    <div class="d-flex justify-content-start align-items-start mb-5 two-fa-card">
+                                                                                        <div class="form-check form-switch me-4">
+                                                                                            <input class="form-check-input" type="checkbox" role="switch" id="twofacheckbox" name="twofacheckbox" runat="server">
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <p class="fs-14 dark-color fw-600 mb-2">
+                                                                                                Activate 2FA
+                                                                                            </p>
+                                                                                            <p class="fs-14 color-neutral-grey mb-0">
+                                                                                                Enable two-factor authentication (2FA) to receive a verification OTP code via your registered email every time you log in.
+                                                                                            </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="text-start">
+                                                                                        <asp:Button ID="btnsubmit_2fa" runat="server" Text="Save changes"
+                                                                                            CssClass="btn btn-grad py-2 px-8 rounded-1" OnClick="btnsubmit_2fa_Click" />
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="text-start">
-                                                                                <button type="submit" id="btnsubmit_2fa" name="btnsubmit_2fa" value="Save" class="btn btn-grad py-2 px-8 rounded-1">
-                                                                                    <span class="indicator-label">Save changes</span>
-                                                                                    <span class="indicator-progress">
-                                                                                        <span class="spinner-border text-white" role="status">
-                                                                                            <span class="visually-hidden">Loading...</span>
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </button>
-                                                                            </div>
-                                                                        </form>
-                                                                     </div>
-                                                                   </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                              </div>
                                                             </div>
                                                         </div>
                                                         <div class="tab-pane fade" id="api_tab" role="tabpanel">
@@ -462,144 +446,126 @@
                                                                 <div class="col-md-12">
                                                                     <div>
                                                                         <div class="card-body shadow-xs rounded-4">
-                                                                        <!--begin::Page title-->
-                                                                        <div class="page-title d-flex flex-column justify-content-center gap-1">
-                                                                            <!--begin::Title-->
-                                                                            <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Enhancing API Security</h1>
-                                                                            <p class="fs-14 color-neutral-grey">
-                                                                            Your new password must be at least 8 characters long. This ensures a baseline level of security and makes it harder for unauthorized individuals to guess.
-                                                                            </p>
-                                                                            <!--end::Title-->
-                                                                        </div>
-                                                                        <!--end::Page title-->
-                                                                        <div class="row mt-3 ">
-                                                                            <div class="col-md-6 mb-3">
-                                                                                <form action="#" method="Post" id="frmapipass" name="frmapipass" class="d-flex flex-column justify-content-between align-content-start h-100">
-                                                                                    <div>
-                                                                                        <label class="form-label">Configure API password</label>
-                                                                                        <input value="" type="text" class="form-control form-custom-input" name="api_pass" id="api_pass" placeholder="Enter your API password">
-                                                                                        <p class="fs-14 color-neutral-grey mt-4">
-                                                                                        Enhance the security of your API access by setting a unique API password. By default, the API uses the same login password, but you can ensure separate authentication for better protection.
-                                                                                        </p>
-                                                                                    </div>
-                                                                                    <button type="submit" id="btnsubmit_api_pass" name="btnsubmit_api_pass" value="Save" class="btn btn-grad py-2 px-8 rounded-1 w-fit">
-                                                                                        <span class="indicator-label">Save</span>
-                                                                                        <span class="indicator-progress">
-                                                                                            <span class="spinner-border text-white" role="status">
-                                                                                                <span class="visually-hidden">Loading...</span>
-                                                                                            </span>
-                                                                                        </span>
-                                                                                    </button>
-                                                                                </form>
-                                                                            </div>
-                                                                            <div class="col-md-6 mb-3 ">
-                                                                                <form action="#" method="Post" id="frmapiip" name="frmapiip" class="mb-3 d-flex flex-column justify-content-between align-content-start h-100">
-                                                                                    <div>
-                                                                                        <label class="form-label">Enable IP Whitelisting:</label>
-                                                                                        <input class="form-control form-custom-input" value="" type="text" name="api_ip" id="api_ip" placeholder="Enter whitelisted IP address for your API">
-                                                                                        <p class="fs-14 color-neutral-grey mt-4">
-                                                                                        Take a proactive approach to protect your API from unauthorized access. Enable IP whitelisting in this section to restrict HTTP(s) API requests to trusted IP addresses only. 
-                                                                                        </p>
-                                                                                    </div>
-                                                                                    <button type="submit" id="btnsubmit_api_ip" name="btnsubmit_api_ip" value="Save" class="btn btn-grad py-2 px-8 rounded-1 w-fit">
-                                                                                        <span class="indicator-label">Save</span>
-                                                                                        <span class="indicator-progress">
-                                                                                            <span class="spinner-border text-white" role="status">
-                                                                                                <span class="visually-hidden">Loading...</span>
-                                                                                            </span>
-                                                                                        </span>
-                                                                                    </button>
-                                                                                </form>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="mt-18">
-                                                                        <div class="card-body shadow-xs rounded-4">
-                                                                        <!--begin::Page title-->
-                                                                        <div class="page-title d-flex flex-column justify-content-center gap-1">
-                                                                            <!--begin::Title-->
-                                                                            <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">DLR Call Back</h1>
-                                                                            <p class="fs-14 color-neutral-grey">
-                                                                            Ensure the URL Accepts GET, POST, and HEAD Methods with HTTP Status 200 Our system will verify the URL for any errors before adding it to your account.
-                                                                            </p>
-                                                                            <!--end::Title-->
-                                                                        </div>
-                                                                        <!--end::Page title-->
-                                                                        <form class="mt-4" action="#" method="Post" id="frmwebhook" name="frmwebhook">
-                                                                            <div>
-                                                                                <label class="form-label">DLR Call Back URL</label>
-                                                                                <input class="form-control form-custom-input" value="" type="text" name="dlr" id="dlr" placeholder="http://www.example.com/dlr.php">
-                                                                                <p class="fs-14 color-neutral-grey mt-4">
-                                                                                Enhance the security of your API access by setting a unique API password. By default, the API uses the same login password, but you can ensure separate authentication for better protection.
+                                                                            <!--begin::Page title-->
+                                                                            <div class="page-title d-flex flex-column justify-content-center gap-1">
+                                                                                <!--begin::Title-->
+                                                                                <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Enhancing API Security</h1>
+                                                                                <p class="fs-14 color-neutral-grey">
+                                                                                    Your new password must be at least 8 characters long. This ensures a baseline level of security and makes it harder for unauthorized individuals to guess.
                                                                                 </p>
+                                                                                <!--end::Title-->
                                                                             </div>
-                                                                            <div class="text-start">
-                                                                                <button type="submit" id="btnsubmit_dlr" name="btnsubmit_dlr" value="Save" class="btn btn-grad py-2 px-8 rounded-1 w-fit">
-                                                                                    <span class="indicator-label">Save</span>
-                                                                                    <span class="indicator-progress">
-                                                                                        <span class="spinner-border text-white" role="status">
-                                                                                            <span class="visually-hidden">Loading...</span>
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </button>
+                                                                            <!--end::Page title-->
+                                                                            <div class="row mt-3 ">
+                                                                                <div class="col-md-6 mb-3">
+                                                                                    <div class="d-flex flex-column justify-content-between align-content-start h-100">
+                                                                                        <div>
+                                                                                            <label class="form-label">Configure API password</label>
+                                                                                            <input value="" type="password" class="form-control form-custom-input" name="api_pass" id="api_pass" runat="server" placeholder="Enter your API password">
+                                                                                            <p class="fs-14 color-neutral-grey mt-4">
+                                                                                                Enhance the security of your API access by setting a unique API password. By default, the API uses the same login password, but you can ensure separate authentication for better protection.
+                                                                                            </p>
+                                                                                        </div>
+
+                                                                                        <asp:Button ID="btnsubmit_api_pass" runat="server" Text="Save"
+                                                                                            CssClass="btn btn-grad py-2 px-8 rounded-1 w-fit"
+                                                                                            OnClientClick="updateAPIPasswordSubmit('btnsubmit_api_pass'); return false;" OnClick="btnsubmit_api_pass_Click" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6 mb-3 ">
+                                                                                    <div class="mb-3 d-flex flex-column justify-content-between align-content-start h-100">
+                                                                                        <div>
+                                                                                            <label class="form-label">Enable IP Whitelisting:</label>
+                                                                                            <input class="form-control form-custom-input" value="" type="text" name="api_ip" id="api_ip" runat="server" placeholder="Enter whitelisted IP address for your API">
+                                                                                            <p class="fs-14 color-neutral-grey mt-4">
+                                                                                                Take a proactive approach to protect your API from unauthorized access. Enable IP whitelisting in this section to restrict HTTP(s) API requests to trusted IP addresses only. 
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <asp:Button ID="btnsubmit_api_ip" runat="server" Text="Save"
+                                                                                            CssClass="btn btn-grad py-2 px-8 rounded-1 w-fit"
+                                                                                            OnClientClick="updateAPIIPubmit('btnsubmit_api_ip'); return false;" OnClick="btnsubmit_api_ip_Click" />
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
-												                        </form>
+                                                                        </div>
+                                                                        <div class="mt-18">
+                                                                            <div class="card-body shadow-xs rounded-4">
+                                                                                <!--begin::Page title-->
+                                                                                <div class="page-title d-flex flex-column justify-content-center gap-1">
+                                                                                    <!--begin::Title-->
+                                                                                    <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">DLR Call Back</h1>
+                                                                                    <p class="fs-14 color-neutral-grey">
+                                                                                        Ensure the URL Accepts GET, POST, and HEAD Methods with HTTP Status 200 Our system will verify the URL for any errors before adding it to your account.
+                                                                                    </p>
+                                                                                    <!--end::Title-->
+                                                                                </div>
+                                                                                <!--end::Page title-->
+                                                                                <div class="mt-4">
+                                                                                    <div>
+                                                                                        <label class="form-label">DLR Call Back URL</label>
+                                                                                        <input class="form-control form-custom-input" value="" type="text" name="dlr" id="dlr" runat="server" placeholder="http://www.example.com/dlr.php">
+                                                                                        <p class="fs-14 color-neutral-grey mt-4">
+                                                                                            Enhance the security of your API access by setting a unique API password. By default, the API uses the same login password, but you can ensure separate authentication for better protection.
+                                                                                        </p>
+                                                                                    </div>
+                                                                                    <div class="text-start">
+                                                                                         <asp:Button ID="btnsubmit_dlr" runat="server" Text="Save"
+                                                                                             CssClass="btn btn-grad py-2 px-8 rounded-1 w-fit"
+                                                                                             OnClientClick="dlrSubmit('btnsubmit_dlr'); return false;" OnClick="btnsubmit_dlr_Click" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
-                                                                    </div>
-                                                                 </div>
-                                                               </div>
-                                                           </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="tab-pane fade" id="notifications_tab" role="tabpanel">
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div>
-                                                                       <div class="card-body shadow-xs rounded-4">
-                                                                        <!--begin::Page title-->
-                                                                        <div class="page-title d-flex flex-column justify-content-center gap-1">
-                                                                            <!--begin::Title-->
-                                                                            <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Notifications</h1>
-                                                                            <p class="fs-14 color-neutral-grey">
-                                                                                Once you've set your desired low balance threshold, our system will monitor your account balance. If it falls below the specified amount, we'll immediately notify you through email.
-                                                                            </p>
-                                                                            <!--end::Title-->
-                                                                        </div>
-                                                                        <!--end::Page title-->
-                                                                        <form class="mt-4" action="#" method="Post" id="frmlbn" name="frmlbn">
-                                                                            <div class="row">
-                                                                                <div class="col-md-6">
-                                                                                    <div>
+                                                                        <div class="card-body shadow-xs rounded-4">
+                                                                            <!--begin::Page title-->
+                                                                            <div class="page-title d-flex flex-column justify-content-center gap-1">
+                                                                                <!--begin::Title-->
+                                                                                <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold m-1">Notifications</h1>
+                                                                                <p class="fs-14 color-neutral-grey">
+                                                                                    Once you've set your desired low balance threshold, our system will monitor your account balance. If it falls below the specified amount, we'll immediately notify you through email.
+                                                                                </p>
+                                                                                <!--end::Title-->
+                                                                            </div>
+                                                                            <!--end::Page title-->
+                                                                            <div class="mt-4">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-6">
                                                                                         <div>
-                                                                                            <div class="d-flex justify-content-start align-items-start mb-5">
-                                                                                                <div class="form-check form-switch me-4">
-                                                                                                    <input class="form-check-input" type="checkbox" role="switch" id="low_balance_checkbox" name="low_balance_checkbox">
-                                                                                                </div>
-                                                                                                <div>
-                                                                                                    <div>
-                                                                                                        <p class="fs-14 dark-color fw-600 mb-2">
-                                                                                                        Balance warning
-                                                                                                        </p>
-                                                                                                        <p class="fs-14 color-neutral-grey mb-0">
-                                                                                                        Send an email or SMS anytime your balance runs below the listed amount.
-                                                                                                        </p>
-                                                                                                    </div>
-                                                                                                    <div class="mb-5 mt-8">
-                                                                                                        <label class="form-label">When balance falls below</label>
-                                                                                                        <input class="form-control form-custom-input" type="text" disabled="" value="" name="low_balance_amount" maxlength="7" id="low_balance_amount" required="" placeholder="Enter an amount" onkeypress="return goodchars(event,'0123456789');">
+                                                                                            <div>
+                                                                                                <div class="d-flex justify-content-start align-items-start mb-5">
+                                                                                                    <div class="form-check form-switch me-4">
+                                                                                                        <input class="form-check-input" type="checkbox" role="switch" id="low_balance_checkbox" name="low_balance_checkbox" runat="server">
                                                                                                     </div>
                                                                                                     <div>
-                                                                                                        <label class="form-label">Notification sent to:</label>
-                                                                                                        <input class="form-control form-custom-input" type="email" disabled="" value="" name="low_balance_email" id="low_balance_email" required="" placeholder="Email address to notify">
-                                                                                                    </div>
-                                                                                                    <div class="text-start mt-5">
-                                                                                                        <button type="submit" id="btnsubmit_alert" name="btnsubmit_alert" value="Save" class="btn btn-grad py-2 px-8 rounded-1">
-                                                                                                            <span class="indicator-label">Save changes</span>
-                                                                                                            <span class="indicator-progress">
-                                                                                                                <span class="spinner-border text-white" role="status">
-                                                                                                                    <span class="visually-hidden">Loading...</span>
-                                                                                                                </span>
-                                                                                                            </span>
-                                                                                                        </button>
+                                                                                                        <div>
+                                                                                                            <p class="fs-14 dark-color fw-600 mb-2">
+                                                                                                                Balance warning
+                                                                                                            </p>
+                                                                                                            <p class="fs-14 color-neutral-grey mb-0">
+                                                                                                                Send an email or SMS anytime your balance runs below the listed amount.
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                        <div class="mb-5 mt-8">
+                                                                                                            <label class="form-label">When balance falls below</label>
+                                                                                                            <input class="form-control form-custom-input" type="text" disabled="" value="" name="low_balance_amount" maxlength="7" id="low_balance_amount" runat="server" placeholder="Enter an amount" onkeypress="return goodchars(event,'0123456789');">
+                                                                                                        </div>
+                                                                                                        <div>
+                                                                                                            <label class="form-label">Notification sent to:</label>
+                                                                                                            <input class="form-control form-custom-input" type="email" disabled="" value="" name="low_balance_email" id="low_balance_email" runat="server" placeholder="Email address to notify">
+                                                                                                        </div>
+                                                                                                        <div class="text-start mt-5">
+                                                                                                            <asp:Button ID="btnsubmit_alert" runat="server" Text="Save changes"
+                                                                                                                CssClass="btn btn-grad py-2 px-8 rounded-1"
+                                                                                                                OnClientClick="updateNotification('btnsubmit_alert'); return false;" OnClick="btnsubmit_alert_Click" />
+                                                                                                        </div>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -607,11 +573,10 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </form>
+                                                                        </div>
                                                                     </div>
-                                                                    </div>
-                                                               </div>
-                                                           </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -619,33 +584,35 @@
                                             </div>
                                             <!--end::Card widget 4-->
                                         </div>
-                                        <!--end::Col--> 
+                                        <!--end::Col-->
                                     </div>
                                     <!--end::Row-->
-								</div>
-								<!--end::Content container-->
-							</div>
-							<!--end::Content-->
-						</div>
-						<!--end::Content wrapper-->
-                        <uc1:footer runat="server" id="footer" />
-					</div>
-					<!--end:::Main-->
-				</div>
-				<!--end::Wrapper-->
-			</div>
-			<!--end::Page-->
-		</div>
-		<!--end::App-->
-		<!--begin::Scrolltop-->
-		<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
-			<i class="ki-outline ki-arrow-up"></i>
-		</div>
-		<!--end::Scrolltop-->
+                                </div>
+                                <!--end::Content container-->
+                            </div>
+                            <!--end::Content-->
+                        </div>
+                        <!--end::Content wrapper-->
+                        <uc1:footer runat="server" ID="footer" />
+                    </div>
+                    <!--end:::Main-->
+                </div>
+                <!--end::Wrapper-->
+            </div>
+            <!--end::Page-->
+        </div>
+        <!--end::App-->
+        <!--begin::Scrolltop-->
+        <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+            <i class="ki-outline ki-arrow-up"></i>
+        </div>
+        <!--end::Scrolltop-->
 
-       
-        <uc1:footerLinks runat="server" id="footerLinks" />
+
+        <uc1:footerLinks runat="server" ID="footerLinks" />
         <script src="/assets/js/settings.js"></script>
-	</body>
-	<!--end::Body-->
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    </form>
+</body>
+<!--end::Body-->
 </html>
