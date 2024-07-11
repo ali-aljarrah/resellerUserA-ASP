@@ -24,6 +24,15 @@ namespace resellerUserA
         protected global::resellerUserA.Controls.head head;
 
         /// <summary>
+        /// temp_form control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm temp_form;
+
+        /// <summary>
         /// loader control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,42 @@ namespace resellerUserA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::resellerUserA.Controls.sideBar sideBar;
+
+        /// <summary>
+        /// temp_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText temp_name;
+
+        /// <summary>
+        /// temp_msg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea temp_msg;
+
+        /// <summary>
+        /// savetempbtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button savetempbtn;
+
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
         /// footer control.

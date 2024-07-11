@@ -279,7 +279,7 @@
 																	<td>
 																		<div class="d-flex align-items-center ps-5">
 																			<div class="symbol symbol-50px me-3">
-																				 <img src="/assets/img/home/german.webp" class="" alt="" />
+																				 <img src="/assets/img/home/german.webp" class="img-fluid" alt="" />
 																			</div>
 																			<div class="d-flex justify-content-start flex-column">
 																				<a href="apps/projects/users.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Germany</a>
@@ -297,7 +297,7 @@
 																	<td>
 																		<div class="d-flex align-items-center ps-5">
 																			<div class="symbol symbol-50px me-3">
-																				<img src="assets/img/home/japan.webp" class="" alt="" />
+																				<img src="assets/img/home/japan.webp" class="img-fluid" alt="" />
 																			</div>
 																			<div class="d-flex justify-content-start flex-column">
 																				<a href="apps/projects/users.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Japan</a>
@@ -315,7 +315,7 @@
 																	<td>
 																		<div class="d-flex align-items-center ps-5">
 																			<div class="symbol symbol-50px me-3">
-																				<img src="assets/img/home/netherland.webp" class="" alt="" />
+																				<img src="assets/img/home/netherland.webp" class="img-fluid" alt="" />
 																			</div>
 																			<div class="d-flex justify-content-start flex-column">
 																				<a href="apps/projects/users.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Netherland</a>
@@ -336,6 +336,7 @@
 													<!--end::Table-->
 													<!--begin::footer-->
 													<div class="card-footer pt-5 d-flex justify-content-end mb-0">
+														<a href="/sentreport.aspx">
 															<!--begin::Title-->
 															<h3 class="card-title align-items-start flex-column mb-0">
 																<span class="card-label fw-bold d-flex align-items-center text-gray-800 fs-16 blue">View all
@@ -346,6 +347,7 @@
 																</span>
 															</h3>
 															<!--end::Title-->
+														</a>
 													</div>
 														<!--end::footer-->
 													</div>
@@ -375,7 +377,7 @@
 													<!--end::Title-->
 													<!--begin::button-->
 													<div class="card-toolbar">
-														<a href="#" class="soft-blue fs-14 fw-bold pb-5 mb-5">View Report</a>
+														<a href="/sentreport.aspx" class="soft-blue fs-14 fw-bold pb-5 mb-5">View Report</a>
 													</div>
 													<!--end::button-->
 												</div>
@@ -407,7 +409,7 @@
 															</div>
 															<!--begin::button-->
 															<div class="mt-5">
-																<a href="#" class="btn btn-primary btn-grad mb-0">Upgrade now</a>
+																<a href="/reload.aspx" class="btn btn-primary btn-grad mb-0">Upgrade now</a>
 															</div>
 															<!--end::button-->
 														</div>

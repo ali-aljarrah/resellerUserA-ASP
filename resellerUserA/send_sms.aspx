@@ -94,13 +94,11 @@
                                                             </div>
                                                             <input runat="server" type="hidden" name="codePoints" id="codePoints" value="" onblur="document.frmSendSingleSms.txtMessage.value = convertCP2Char( document.frmSendSingleSms.codePoints.value );&#10;document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );&#10;return false;" readonly="readonly"/>                                                    
                                                             <input runat="server" type="hidden" name="UTF16" value="" onblur="document.frmSendSingleSms.codePoints.value = convertUTF162CP( document.frmSendSingleSms.UTF16.value );&#10;return false;" rows="3" cols="50" />  
-                                                            <textarea runat="server" name="txtMessage" rows="4" id="txtMessage" placeholder="Write message here..." class="form-control form-custom-textarea" size="30" maxlength="335" onkeypress="javascript:setCounter()" onblur="javascript:setCounter(); document.frmSendSingleSms.codePoints.value = convertChar2CP(document.frmSendSingleSms.txtMessage.value);
-                                                            document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );
-                                                            return false;" onclick="javascript:setCounter();document.frmSendSingleSms.codePoints.value = convertChar2CP(document.frmSendSingleSms.txtMessage.value);
-                                                            document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );
-                                                            return false;" onkeyup="javascript:setCounter(); document.frmSendSingleSms.codePoints.value = convertChar2CP(document.frmSendSingleSms.txtMessage.value);
-                                                            document.frmSendSingleSms.UTF16.value = convertCP2UTF16( document.frmSendSingleSms.codePoints.value );
-                                                            return false;" dir="ltr"></textarea>
+                                                            <textarea runat="server" name="txtMessage" rows="4" id="txtMessage" placeholder="Write message here..." 
+                                                                class="form-control form-custom-textarea" size="30" maxlength="335" 
+                                                                onkeypress="javascript:setCounter()" 
+                                                                onblur="javascript:setCounter();" onclick="javascript:setCounter();" 
+                                                                onkeyup="javascript:setCounter();" dir="ltr"></textarea>
                                                         
                                                             <div class="fs-12 text-gradients-blue">
                                                                 <input runat="server" type="text" name="txtcount" id="txtcount" value="0 : 1 SMS Parts" readonly="readonly" class="fs-12 text-gradients-blue text-start border-0">
@@ -109,14 +107,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="d-flex justify-content-start align-items-start">
-                                                            <button runat="server" type="submit" class="btn btn-grad-1 py-4 px-9 rounded-3" id="btnSubmit" name="btnSubmit">
-                                                                <span class="indicator-label">Send SMS</span>
-                                                                <span class="indicator-progress">
-                                                                    <span class="spinner-border text-white" role="status">
-                                                                        <span class="visually-hidden">Loading...</span>
-                                                                    </span>
-                                                                </span>
-                                                            </button>
+                                                            <asp:Button ID="BtnSubmit" runat="server" Text="Send SMS" 
+                                                                CssClass="btn btn-grad-1 py-4 px-9 rounded-3"
+                                                                OnClientClick="sendSubmit('BtnSubmit'); return false;" OnClick="BtnSubmit_Click" />
+                                                             
                                                             <button runat="server" type="button" class="btn btn-outline-dark btn-bordered py-4 px-8 rounded-2 ms-8" id="btnSaveTemplate" name="btnSaveTemplate">
                                                                 <span class="indicator-label">Save as template</span>
                                                                 <span class="indicator-progress">
@@ -125,7 +119,9 @@
                                                                     </span>
                                                                 </span>
                                                             </button>
+
                                                         </div>
+                                                          <asp:ScriptManager ID="ScriptManager1" runat="server" />
                                                     </div>
                                                 </div>
                                                 <!--end: Card Body-->
@@ -151,47 +147,47 @@
                                                         <table id="recent-sms-table" class="table custom-table">
                                                             <thead>
                                                                 <tr>
-                                                                    <th class="white-color fs-16 fw-600">Number</th>
-                                                                    <th class="white-color fs-16 fw-600">Sent at</th>
-                                                                    <th class="white-color fs-16 fw-600">Status</th>
+                                                                    <th class="white-color fs-14 fw-600">Number</th>
+                                                                    <th class="white-color fs-14 fw-600">Sent at</th>
+                                                                    <th class="white-color fs-14 fw-600">Status</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td class="color-black-1 fs-16">+600138927737</td>
-                                                                    <td class="color-black-1 fs-16">21 August 2023, 11:23 AM</td>
-                                                                    <td class="text-success fs-16">Delivered</td>
+                                                                    <td class="color-black-1 fs-14">+600138927737</td>
+                                                                    <td class="color-black-1 fs-14">21 August 2023, 11:23 AM</td>
+                                                                    <td class="text-success fs-14">Delivered</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="color-black-1 fs-16">+600138927737</td>
-                                                                    <td class="color-black-1 fs-16">21 August 2023, 11:23 AM</td>
-                                                                    <td class="text-success fs-16">Delivered</td>
+                                                                    <td class="color-black-1 fs-14">+600138927737</td>
+                                                                    <td class="color-black-1 fs-14">21 August 2023, 11:23 AM</td>
+                                                                    <td class="text-success fs-14">Delivered</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="color-black-1 fs-16">+600138927737</td>
-                                                                    <td class="color-black-1 fs-16">21 August 2023, 11:23 AM</td>
-                                                                    <td class="text-success fs-16">Delivered</td>
+                                                                    <td class="color-black-1 fs-14">+600138927737</td>
+                                                                    <td class="color-black-1 fs-14">21 August 2023, 11:23 AM</td>
+                                                                    <td class="text-success fs-14">Delivered</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="color-black-1 fs-16">+600138927737</td>
-                                                                    <td class="color-black-1 fs-16">21 August 2023, 11:23 AM</td>
-                                                                    <td class="text-success fs-16">Delivered</td>
+                                                                    <td class="color-black-1 fs-14">+600138927737</td>
+                                                                    <td class="color-black-1 fs-14">21 August 2023, 11:23 AM</td>
+                                                                    <td class="text-success fs-14">Delivered</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="color-black-1 fs-16">+600138927737</td>
-                                                                    <td class="color-black-1 fs-16">21 August 2023, 11:23 AM</td>
-                                                                    <td class="text-success fs-16">Delivered</td>
+                                                                    <td class="color-black-1 fs-14">+600138927737</td>
+                                                                    <td class="color-black-1 fs-14">21 August 2023, 11:23 AM</td>
+                                                                    <td class="text-success fs-14">Delivered</td>
                                                                 </tr>
-                                                                <tr>
-                                                                    <td class="color-black-1 fs-16">+600138927737</td>
-                                                                    <td class="color-black-1 fs-16">21 August 2023, 11:23 AM</td>
-                                                                    <td class="text-success fs-16">Delivered</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="color-black-1 fs-16">+600138927737</td>
-                                                                    <td class="color-black-1 fs-16">21 August 2023, 11:23 AM</td>
-                                                                    <td class="text-success fs-16">Delivered</td>
-                                                                </tr>
+                                                                 <tr>
+                                                                   <td class="color-black-1 fs-14">+600138927737</td>
+                                                                   <td class="color-black-1 fs-14">21 August 2023, 11:23 AM</td>
+                                                                   <td class="text-success fs-14">Delivered</td>
+                                                               </tr>
+                                                               <tr>
+                                                                   <td class="color-black-1 fs-14">+600138927737</td>
+                                                                   <td class="color-black-1 fs-14">21 August 2023, 11:23 AM</td>
+                                                                   <td class="text-success fs-14">Delivered</td>
+                                                               </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -286,19 +282,15 @@
                     
                         <div class="mb-8 templateNewName" style="">
                             <label for="templateName" class="form-label fs-14 color-black-1 required">Template name</label>
-                            <input type="text" class="form-control form-custom-input" name="templateName" id="templateName" placeholder="Type Template Name" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="New template name" data-bs-original-title="New template name" data-kt-initialized="1" fdprocessedid="nnyci4">
+                            <input type="text" class="form-control form-custom-input" name="templateName" id="templateName" runat="server" placeholder="Type Template Name" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="New template name" data-bs-original-title="New template name" data-kt-initialized="1">
                         </div>
                     </div>
 
                     <div class="modal-footer justify-content-start">
-                        <button type="submit" class="btn btn-grad-1 py-4 px-8 rounded-3" name="saveTemplateSubmitBtn" id="saveTemplateSubmitBtn">
-                            <span class="indicator-label">Select</span>
-                            <span class="indicator-progress">
-                                <span class="spinner-border text-white" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </span>
-                            </span>
-                        </button>
+                          <asp:Button ID="SaveTemplateSubmitBtn" runat="server" Text="Save Template" 
+                              CssClass="btn btn-grad-1 py-4 px-8 rounded-3"
+                              OnClientClick="saveTemplateSubmit('SaveTemplateSubmitBtn'); return false;" OnClick="SaveTemplateSubmitBtn_Click" />
+
                         <button type="button" class="btn btn-outline-dark btn-bordered py-4 px-8 rounded-3" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -306,8 +298,9 @@
         </div>
     
         <uc1:footerLinks runat="server" id="footerLinks" />
+     
 
-        <script src="/assets/js/sendsms.js" defer></script>
+        <script src="/assets/js/sendsms.js"></script>
     </form>
 </body>
 <!--end::Body-->

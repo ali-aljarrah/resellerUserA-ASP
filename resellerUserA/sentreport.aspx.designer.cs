@@ -24,6 +24,15 @@ namespace resellerUserA
         protected global::resellerUserA.Controls.head head;
 
         /// <summary>
+        /// hlrForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm hlrForm;
+
+        /// <summary>
         /// loader control.
         /// </summary>
         /// <remarks>
@@ -51,22 +60,13 @@ namespace resellerUserA
         protected global::resellerUserA.Controls.sideBar sideBar;
 
         /// <summary>
-        /// hlrForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm hlrForm;
-
-        /// <summary>
         /// date_from control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl date_from;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText date_from;
 
         /// <summary>
         /// date_to control.
@@ -75,16 +75,25 @@ namespace resellerUserA
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl date_to;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText date_to;
 
         /// <summary>
-        /// export control.
+        /// exportSentReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton export;
+        protected global::System.Web.UI.WebControls.Button exportSentReport;
+
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
         /// footer control.

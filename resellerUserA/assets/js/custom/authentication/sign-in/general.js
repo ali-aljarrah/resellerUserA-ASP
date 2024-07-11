@@ -3,8 +3,8 @@ var KTSigninGeneral = (function () {
     var e, t, i;
     return {
         init: function () {
-            (e = document.querySelector("#kt_sign_in_form")),
-                (t = document.querySelector("#kt_sign_in_submit")),
+            (e = document.querySelector("#sign_in_form")),
+                (t = document.querySelector("#sign_in_submit")),
                 (i = FormValidation.formValidation(e, {
                     fields: {
                         email: { validators: { notEmpty: { message: "Username or Email address is required" } } },
@@ -17,7 +17,8 @@ var KTSigninGeneral = (function () {
                     i.validate().then(function (i) {
                         "Valid" == i
                         
-                            ?  grecaptcha.execute()
+                            ? grecaptcha.execute()
+
                             : Swal.fire({
                                   text: "Oops! It seems like there are some issues with the login form you submitted. Please try again.",
                                   icon: "error",
@@ -33,3 +34,25 @@ var KTSigninGeneral = (function () {
 KTUtil.onDOMContentLoaded(function () {
     KTSigninGeneral.init();
 });
+
+function showMessage(type, message) {
+    if (type == 'success') {
+        return Swal.fire({
+            text: message,
+            icon: "success",
+            buttonsStyling: !1,
+            confirmButtonText: "Ok",
+            customClass: { confirmButton: "btn btn-primary" },
+        });
+    }
+
+    if (type == "error") {
+        return Swal.fire({
+            text: message,
+            icon: "error",
+            buttonsStyling: !1,
+            confirmButtonText: "Ok",
+            customClass: { confirmButton: "btn btn-primary" },
+        });
+    }
+}

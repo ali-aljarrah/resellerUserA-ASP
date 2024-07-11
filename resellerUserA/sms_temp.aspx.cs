@@ -13,5 +13,28 @@ namespace resellerUserA
         {
 
         }
+
+        protected void savetempbtn_Click(object sender, EventArgs e)
+        {
+            string script;
+
+            if(temp_name.Value.Trim() == "" )
+            {
+                script = "toastr.error(\"Please enter template name\");";
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", script, true);
+                return;
+            }
+
+            if (temp_msg.Value.Trim() == "")
+            {
+                script = "toastr.error(\"Please enter template message body\");";
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", script, true);
+                return;
+            }
+
+            script = "  toastr.success(\"Template saved Successfully!\");";
+            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", script, true);
+            return;
+        }
     }
 }

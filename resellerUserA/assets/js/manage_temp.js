@@ -1,28 +1,25 @@
-$('#savetempbtn').click(function(e) {
-    e.preventDefault();
+function saveNewTemplate(id) {
+    var el = document.getElementById(id);
+    el.disabled = true;
 
-    $(this).prop('disabled', true);
+    var temp_name = document.getElementById("temp_name").value;
+    var temp_msg = document.getElementById("temp_msg").value;
 
-    var temp_name = $('#temp_name').val();
-    var temp_msg = $('#temp_msg').val();
-
-    if(temp_name.trim() == '') {
+    if (temp_name.trim() == '') {
         toastr.error("Please enter template name");
-        $(this).prop('disabled', false);
-        return;
+        el.disabled = false;
+        return false;
     }
 
-    if(temp_msg.trim() == '') {
+    if (temp_msg.trim() == '') {
         toastr.error("Please enter template message body");
-        $(this).prop('disabled', false);
-        return;
+        el.disabled = false;
+        return false;
     }
 
-    toastr.success("Template saved Successfully!");
-
-    $(this).prop('disabled', false);
-
-});
+    el.disabled = false;
+    __doPostBack(id, '');
+}
 
 $('.delete-temp').click(function(e) {
     Swal.fire({

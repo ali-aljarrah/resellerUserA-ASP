@@ -23,9 +23,9 @@ var KTSignupGeneral = (function () {
         };
     return {
         init: function () {
-            (e = document.querySelector("#kt_sign_up_form")),
-                (t = document.querySelector("#kt_sign_up_submit")),
-                (r = KTPasswordMeter.getInstance(e.querySelector('[data-kt-password-meter="true"]'))),
+            (e = document.querySelector("#sign_up_form")),
+                (t = document.querySelector("#sign_up_submit")),
+                //(r = KTPasswordMeter.getInstance(e.querySelector('[data-kt-password-meter="true"]'))),
                 (a = FormValidation.formValidation(e, {
                     fields: {
                         "fullName": { validators: {regexp: { regexp: /^[a-zA-Z_ ]+$/, message: "Only English letters are allowed" }, notEmpty: { message: "Full Name is required" } } },
@@ -61,3 +61,25 @@ var KTSignupGeneral = (function () {
 KTUtil.onDOMContentLoaded(function () {
     KTSignupGeneral.init();
 });
+
+function showMessage(type, message) {
+    if (type == 'success') {
+        return Swal.fire({
+            text: message,
+            icon: "success",
+            buttonsStyling: !1,
+            confirmButtonText: "Ok",
+            customClass: { confirmButton: "btn btn-primary" },
+        });
+    }
+
+    if (type == "error") {
+        return Swal.fire({
+            text: message,
+            icon: "error",
+            buttonsStyling: !1,
+            confirmButtonText: "Ok",
+            customClass: { confirmButton: "btn btn-primary" },
+        });
+    }
+}

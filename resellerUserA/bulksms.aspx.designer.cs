@@ -141,13 +141,22 @@ namespace resellerUserA
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden txtMessageCount;
 
         /// <summary>
-        /// btnSubmit control.
+        /// BulkBtnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnSubmit;
+        protected global::System.Web.UI.WebControls.Button BulkBtnSubmit;
+
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
         /// file1 control.

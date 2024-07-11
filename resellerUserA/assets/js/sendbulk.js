@@ -21,7 +21,7 @@ $('#txtMessage').on('keypress', function () {
     }
 });
 
-$("[name='fileListCheckbox']").change(function() {
+$(".file-checkbox").change(function() {
     var value = $(this).val();
     var filesTextArea = $('#selectedFiles').val();
     var numbersCount = parseInt(value.match(/\|(.*?)\|/)[1]);
@@ -44,6 +44,7 @@ $("[name='fileListCheckbox']").change(function() {
         $('#total_message').text(oldNumberCount-numbersCount);
     }
 })
+
 
 var templates = [
     {
@@ -166,54 +167,102 @@ $('#var_3').click(function(e) {
     $('#txtMessage').val(oldText + ' [var3]');
 });
 
-$('#btnSubmit').click(function(e) {
-    e.preventDefault();
+//$('#btnSubmit').click(function(e) {
+//    e.preventDefault();
 
-    $(this).prop('disabled', true);
+//    $(this).prop('disabled', true);
 
-    var txtSender = $('#txtSender').val();
-    var txtNumber = $('#txtNumber').val();
-    var cmbMessageType = $('#cmbMessageType').find(":selected").val();
-    var txtMessage = $('#txtMessage').val();
-    var selectedFiles = $('#selectedFiles').val();
+//    var txtSender = $('#txtSender').val();
+//    var txtNumber = $('#txtNumber').val();
+//    var cmbMessageType = $('#cmbMessageType').find(":selected").val();
+//    var txtMessage = $('#txtMessage').val();
+//    var selectedFiles = $('#selectedFiles').val();
+
+//    if (txtSender.length > 18 || txtSender.trim() == '') {
+
+//        toastr.error("Sender Name can't be empty and must be less than 18 characters!");
+
+//        $(this).prop('disabled', false);
+
+//        return;
+//    }
+
+//    if (cmbMessageType == '') {
+
+//        toastr.error("Please select message type!");
+
+//        $(this).prop('disabled', false);
+
+//        return;
+//    }
+
+//    if (selectedFiles.trim() == '') {
+
+//        toastr.error("Please select contact files!");
+
+//        $(this).prop('disabled', false);
+
+//        return;
+//    }
+
+//    if (txtMessage.trim() == '') {
+
+//        toastr.error("Please enter message to send!");
+
+//        $(this).prop('disabled', false);
+
+//        return;
+//    }
+
+//    toastr.success("Message has been sent Successfully!");
+
+//    $(this).prop('disabled', false);
+//});
+
+
+function sendBulkSubmit(id) {
+
+    var el = document.getElementById(id);
+    el.disabled = true;
+
+    var txtSender = document.getElementById("txtSender").value;
+    var e = document.getElementById("cmbMessageType");
+    var cmbMessageType = e.value;
+    var txtMessage = document.getElementById("txtMessage").value;
+    var selectedFiles = document.getElementById("selectedFiles").value;
 
     if (txtSender.length > 18 || txtSender.trim() == '') {
 
         toastr.error("Sender Name can't be empty and must be less than 18 characters!");
 
-        $(this).prop('disabled', false);
-
-        return;
+        el.disabled = false;
+        return false;
     }
 
     if (cmbMessageType == '') {
 
         toastr.error("Please select message type!");
 
-        $(this).prop('disabled', false);
-
-        return;
+        el.disabled = false;
+        return false;
     }
 
     if (selectedFiles.trim() == '') {
 
         toastr.error("Please select contact files!");
 
-        $(this).prop('disabled', false);
-
-        return;
+        el.disabled = false;
+        return false;
     }
 
     if (txtMessage.trim() == '') {
 
         toastr.error("Please enter message to send!");
 
-        $(this).prop('disabled', false);
-
-        return;
+        el.disabled = false;
+        return false;
     }
 
-    toastr.success("Message has been sent Successfully!");
-
-    $(this).prop('disabled', false);
-});
+    el.disabled = false;
+    __doPostBack(id, '');
+}

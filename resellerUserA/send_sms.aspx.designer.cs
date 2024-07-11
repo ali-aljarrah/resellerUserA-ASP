@@ -132,13 +132,13 @@ namespace resellerUserA
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden txtMessageCount;
 
         /// <summary>
-        /// btnSubmit control.
+        /// BtnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnSubmit;
+        protected global::System.Web.UI.WebControls.Button BtnSubmit;
 
         /// <summary>
         /// btnSaveTemplate control.
@@ -148,6 +148,15 @@ namespace resellerUserA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton btnSaveTemplate;
+
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
         /// footer control.
@@ -166,6 +175,24 @@ namespace resellerUserA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton chooseTemplateSubmitBtn;
+
+        /// <summary>
+        /// templateName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText templateName;
+
+        /// <summary>
+        /// SaveTemplateSubmitBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SaveTemplateSubmitBtn;
 
         /// <summary>
         /// footerLinks control.

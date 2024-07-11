@@ -1,9 +1,3 @@
-// $('#latest-table').DataTable({
-//     "paging": false,
-//     "bInfo" : false
-// });
-
-
 var templates = [
     {
         templateName: "Evacuation",
@@ -294,86 +288,69 @@ $('#btnSaveTemplate').click(function(e) {
     saveTemplate.show();
 });
 
-$('#saveTemplateSubmitBtn').click(function(e) {
-    e.preventDefault();
-    $(this).prop('disabled', true);
+function saveTemplateSubmit(id) {
 
-    var templateName = $('#templateName').val();
+    var el = document.getElementById(id);
+    el.disabled = true;
 
-    if(templateName.trim() == '') {
+    var templateName = document.getElementById("templateName").value;
+
+    if (templateName.trim() == '') {
         toastr.error("Please enter template name!");
 
-        $(this).prop('disabled', false);
+        el.disabled = false;
 
-        return;
+        return false;
     }
 
-    toastr.success("Template saved Successfully!");
+    el.disabled = false;
 
-    saveTemplate.hide();
+    __doPostBack(id, '');
+}
 
-    $(this).prop('disabled', false);
+function sendSubmit(id) {
 
-});
+    var el = document.getElementById("BtnSubmit");
+    el.disabled = true;
 
-$('#btnSubmit').click(function(e) {
-    e.preventDefault();
-
-    $(this).prop('disabled', true);
-
-    var txtSender = $('#txtSender').val();
-    var txtNumber = $('#txtNumber').val();
-    var cmbMessageType = $('#cmbMessageType').find(":selected").val();
-    var txtMessage = $('#txtMessage').val();
-    var templateName = $('#templateName').val();
+    var txtSender = document.getElementById("txtSender").value;
+    var txtNumber = document.getElementById("txtNumber").value;
+    var e = document.getElementById("cmbMessageType");
+    var cmbMessageType = e.value;
+    var txtMessage = document.getElementById("txtMessage").value;
 
     if (txtSender.length > 18 || txtSender.trim() == '') {
 
         toastr.error("Sender Name can't be empty and must be less than 18 characters!");
-
-        $(this).prop('disabled', false);
-
-        return;
+        
+        el.disabled = false;
+        return false;
     }
 
     if (cmbMessageType == '') {
 
         toastr.error("Please select message type!");
 
-        $(this).prop('disabled', false);
-
-        return;
+        el.disabled = false;
+        return false;
     }
 
     if (txtNumber.trim() == '') {
 
         toastr.error("Please enter mobile number!");
 
-        $(this).prop('disabled', false);
-
-        return;
+        el.disabled = false;
+        return false;
     }
 
     if (txtMessage.trim() == '') {
 
         toastr.error("Please enter message to send!");
 
-        $(this).prop('disabled', false);
-
-        return;
+        el.disabled = false;
+        return false;
     }
 
-    if($('#c1').is(':checked')) {
-        if(templateName.trim() == '') {
-            toastr.error("Please enter template name!");
-
-            $(this).prop('disabled', false);
-
-            return;
-        }
-    }
-
-    toastr.success("Message has been sent Successfully!");
-
-    $(this).prop('disabled', false);
-});
+    el.disabled = false;
+    __doPostBack(id, '');
+}
